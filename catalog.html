@@ -46,7 +46,7 @@
           <p class="product__description">Диаметр 15 см, высота 10 см</p>
           <div class="product__buy">
             <span>690 руб.</span>
-            <a href="">Добавить в корзину</a>
+            <a href="#">Добавить в корзину</a>
           </div>
         </article>
         <article class="products__item product">
@@ -54,33 +54,63 @@
           <p class="product__description">Диаметр 30 см, высота 30 см</p>
           <div class="product__buy">
             <span>1 500 руб.</span>
-            <a href="">Добавить в корзину</a>
+            <a href="#">Добавить в корзину</a>
           </div>
         </article>
       </section>
       <section class="production">
         <h2 class="visually-hidden">Видео производства наших товаров</h2>
-      <video class="production__video" src="#" width="260"></video>
-      <p class="production__video-description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-      <a href="#" class="production__button button">Сделать заказ</a>
+        <div class="production__video-wrapper">
+          <img src="http://placehold.it/260x150" alt="Вязанная корзинка">
+          <a href="index.html" class="production__video"></a>
+        </div>
+        <p class="production__video-description">
+          По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
+        </p>
+        <a href="#" class="production__button button">Сделать заказ</a>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <section class="social">
+        <h2 class="visually-hidden">Наши страницы в соцсетях</h2>
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__icon social__icon--instagram" href="https://instagram.com">Инстаграм</a>
+          </li>
+          <li class="social__item">
+            <a class="social__icon social__icon--fb" href="https://facebook.com">Фейсбук</a>
+          </li>
+          <li class="social__item">
+            <a class="social__icon social__icon--twitter" href="https://twitter.com">Твиттер</a>
+          </li>
+        </ul>
+      </section>
+      <section class="copyright">
+        <h2 class="visually-hidden">Разработчики сайта</h2>
+        <p class="copyright__dev">
+          Разработано
+          <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__icon">Продвинутый HTML и CSS</a>
+        </p>
+      </section>
+    </footer>
+    <section class="modal">
+      <h2 class="modal__title modal__title--size">Добавить в корзину</h2>
+      <p class="modal__info">Выберите размер:</p>
+      <form class="choice-size" action="https://echo.htmlacademy.ru" method="post">
+        <label class="choice-size__s">
+          <input class="visually-hidden" type="radio" name="size" value="s" checked>
+          <span class="choice-size__radio-indicator">S</span>
+        </label>
+        <label class="choice-size__m">
+          <input class="visually-hidden" type="radio" name="size" value="m">
+          <span class="choice-size__radio-indicator">M</span>
+        </label>
+        <label class="choice-size__l">
+          <input class="visually-hidden" type="radio" name="size" value="l">
+          <span class="choice-size__radio-indicator">L</span>
+        </label>
+        <button class="choice-size__button button" type="submit"><span>Добавить</span></button>
+      </form>
     </section>
-  </main>
-  <footer class="page-footer">
-    <section class="social">
-      <h2 class="visually-hidden">Наши страницы в соцсетях</h2>
-      <ul class="social__list">
-        <li class="social__icon social__icon--instagram">Инстаграм</li>
-        <li class="social__icon social__icon--fb">Фейсбук</li>
-        <li class="social__icon social__icon--twitter">Твиттер</li>
-      </ul>
-    </section>
-    <section class="copyright">
-      <h2 class="visually-hidden">Разработчики сайта</h2>
-      <p class="copyright__dev">
-        Разработано
-        <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__icon">Продвинутый HTML и CSS</a>
-      </p>
-    </section>
-  </footer>
-</body>
+  </body>
 </html>
