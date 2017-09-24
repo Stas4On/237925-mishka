@@ -7,28 +7,28 @@
   <body>
     <header class="header">
       <nav class="main-nav">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--logo">
-              <a href="#" class="site-list__logo"></a>
-              <button class="site-list__toggle site-list__toggle--close" type="button">Открыть меню</button>
-            </li>
-            <li class="site-list__item">
-              <a href="catalog.html">Каталог товаров</a>
-            </li>
-            <li class="site-list__item">
-              <a href="form.html">Вязание на заказ</a>
-            </li>
-            <li class="site-list__item site-list__item--search">
-              <a href="#">Поиск по сайту</a>
-            </li>
-            <li class="site-list__item site-list__item--cart">
-              <a href="#">Корзина: пока пуста</a>
-            </li>
-          </ul>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item site-list__item--logo">
+            <a href="#" class="site-list__logo"></a>
+            <button class="site-list__toggle site-list__toggle--close" type="button">Открыть меню</button>
+          </li>
+          <li class="site-list__item">
+            <a href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="site-list__item">
+            <a href="form.html">Вязание на заказ</a>
+          </li>
+          <li class="site-list__item site-list__item--search">
+            <a href="#">Поиск по сайту</a>
+          </li>
+          <li class="site-list__item site-list__item--cart">
+            <a href="#">Корзина: пока пуста</a>
+          </li>
+        </ul>
       </nav>
     </header>
     <main class="main">
-      <div class="intro--home">
+      <div class="intro intro--home">
         <h1 class="intro__title">Милые штуки ручной работы для дома</h1>
       </div>
       <section class="product-group">
@@ -82,7 +82,7 @@
         </p>
         <p class="reviews__author">
           <b>Анастасия Красильникова</b>
-          @misssssiskras
+          <a href="" class="reviews__nickname">@misssssiskras</a>
         </p>
         <div class="reviews__btn-wrap controls">
           <button class="controls__button controls__button--left">Предыдущий</button>
@@ -92,16 +92,16 @@
       </section>
       <section class="contacts">
         <h2 class="contacts__title contacts__title--small">Контакты</h2>
-        <table class="contacts__table">
-          <tr>
-            <td class="contacts__field">e-mail:</td>
-            <td class="contacts__value">info@mimimishkashop.ru</td>
-          </tr>
-          <tr>
-            <td class="contacts__field">адрес:</td>
-            <td class="contacts__value">г. Санкт-Петербург,ул. Большая Конюшенная, д. 19/8, офис 101</td>
-          </tr>
-        </table>
+        <div class="contacts__wrapper">
+          <p class="contacts__email">
+            <span>e-mail:</span>
+            <a href="mailto:info@mimimishkashop.ru" class="contacts__email">info@mimimishkashop.ru</a>
+          </p>
+          <p class="contacts__adress">
+            <span>адрес:</span>
+            <span>г. Санкт-Петербург,ул. Большая Конюшенная, д. 19/8, офис 101</span>
+          </p>
+        </div>
         <a href="#" class="contacts__map">
           <img src="img/map-mobile.jpg" alt="Наше расположение на карте" width="320" height="457" class="contacts__img-map">
         </a>
@@ -111,11 +111,17 @@
     <footer class="page-footer">
       <section class="social">
         <h2 class="visually-hidden">Наши страницы в соцсетях</h2>
-          <ul class="social__list">
-            <li class="social__icon social__icon--instagram">Инстаграм</li>
-            <li class="social__icon social__icon--fb">Фейсбук</li>
-            <li class="social__icon social__icon--twitter">Твиттер</li>
-          </ul>
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__icon social__icon--instagram" href="https://instagram.com">Инстаграм</a>
+          </li>
+          <li class="social__item">
+            <a class="social__icon social__icon--fb" href="https://facebook.com">Фейсбук</a>
+          </li>
+          <li class="social__item">
+            <a class="social__icon social__icon--twitter" href="https://twitter.com">Твиттер</a>
+          </li>
+        </ul>
       </section>
       <section class="copyright">
         <h2 class="visually-hidden">Разработчики сайта</h2>
@@ -125,5 +131,24 @@
         </p>
       </section>
     </footer>
+    <section class="modal">
+      <h2 class="modal__title modal__title--size">Добавить в корзину</h2>
+      <p class="modal__info">Выберите размер:</p>
+      <form class="choice-size" action="https://echo.htmlacademy.ru" method="post">
+        <label class="choice-size__s">
+          <input class="visually-hidden" type="radio" name="size" value="s" checked>
+          <span class="choice-size__radio-indicator">S</span>
+        </label>
+        <label class="choice-size__m">
+          <input class="visually-hidden" type="radio" name="size" value="m">
+          <span class="choice-size__radio-indicator">M</span>
+        </label>
+        <label class="choice-size__l">
+          <input class="visually-hidden" type="radio" name="size" value="l">
+          <span class="choice-size__radio-indicator">L</span>
+        </label>
+        <button class="choice-size__button button" type="submit"><span>Добавить</span></button>
+      </form>
+    </section>
   </body>
 </html>
