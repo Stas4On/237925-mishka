@@ -10,6 +10,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
     &--lighter {
       background-color: $prodgroup-l-color;
     }
@@ -27,6 +28,7 @@
     padding-right: 160px;
     width: 320px;
     padding-left: 30px;
+
     &::after {
       content: "";
       position: absolute;
@@ -36,10 +38,11 @@
       right: 0;
       width: 62px;
       height: 62px;
-      background: url(../img/icon-interior.svg) no-repeat center;
+      background: url('../img/icon-interior.svg') no-repeat center;
     }
+
     &--toys::after{
-      background: url(../img/icon-toy.svg) no-repeat center;
+      background: url('../img/icon-toy.svg') no-repeat center;
     }
   }
 }

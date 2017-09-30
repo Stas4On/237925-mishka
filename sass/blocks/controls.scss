@@ -7,12 +7,14 @@
     width: 130px;
     height: 52px;
     margin-bottom: 35px;
+
     &--left {
-      background: url(../img/icon-left-arrow.svg) no-repeat center;
+      background: url('../img/icon-left-arrow.svg') no-repeat center;
     }
+
     &--right {
       margin-left: -4px;
-      background: url(../img/icon-right-arrow.svg) no-repeat center;
+      background: url('../img/icon-right-arrow.svg') no-repeat center;
     }
   }
 }

@@ -16,6 +16,7 @@
     display: inline-block;
     vertical-align: middle;
     font-size: 0;
+
     @include size(30px, 40px);
     //временно
     border: 1px solid black;

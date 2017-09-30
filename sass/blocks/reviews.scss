@@ -1,7 +1,9 @@
 .reviews {
   width: 320px;
   margin: 0 auto;
+
   @include page-padding;
+
   .reviews__title {
     @include style-h2;
     padding: 30px 0;
