@@ -1,0 +1,15 @@
+.advantages {
+  width: 320px;
+  .advantages__title {
+    @include style-h2;
+  }
+  .advantages__list {
+    @include list-style-reset;
+  }
+  .advantages__item {
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 20px;
+    color: $l-font-color;
+  }
+}

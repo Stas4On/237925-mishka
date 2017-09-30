@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Мишка: Форма</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="header">
@@ -13,16 +14,16 @@
             <button class="site-list__toggle site-list__toggle--close" type="button">Открыть меню</button>
           </li>
           <li class="site-list__item">
-            <a href="catalog.html">Каталог товаров</a>
+            <a class="site-list__link" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="site-list__item">
-            <a href="form.html">Вязание на заказ</a>
+            <a class="site-list__link" href="form.html">Вязание на заказ</a>
           </li>
-          <li class="site-list__item site-list__item--search">
-            <a href="#">Поиск по сайту</a>
+          <li class="site-list__item">
+            <a class="site-list__link site-list__link--search" href="#">Поиск по сайту</a>
           </li>
-          <li class="site-list__item site-list__item--cart">
-            <a href="#">Корзина: пока пуста</a>
+          <li class="site-list__item">
+            <a class="site-list__link site-list__link--cart" href="#">Корзина: пока пуста</a>
           </li>
         </ul>
       </nav>
@@ -31,23 +32,23 @@
       <div class="intro">
         <h1 class="intro__title">Вязание на заказ</h1>
       </div>
-      <p class="preface">
-        Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
-      </p>
       <form class="order" action="https://echo.htmlacademy.ru" method="post">
-        <fieldset class="order__type">
-          <legend>Тип</legend>
-          <label class="order__accessory">
+        <p class="order__preface">
+          Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+        </p>
+        <fieldset class="order__block-form">
+          <legend class="order__legend">Тип</legend>
+          <label class="order__type">
             <input class="visually-hidden" type="radio" name="product-type" value="accessory" checked>
             Аксессуар для интерьера
           </label>
-          <label class="order__toy">
+          <label class="order__type">
             <input class="visually-hidden" type="radio" name="product-type" value="toy">
             Детская игрушка
           </label>
         </fieldset>
-        <fieldset class="order__color">
-          <legend>Цвет</legend>
+        <fieldset class="order__block-form">
+          <legend class="order__legend">Цвет</legend>
           <label class="order__color-checkbox">
             <input class="visually-hidden" type="checkbox" name="color">
             Белый
@@ -73,52 +74,56 @@
             Оранжевый
           </label>
         </fieldset>
-        <fieldset class="order__name">
-          <legend>ФИО</legend>
-          <label for="first-name" class="order__first-name">Имя:</label>
-          <input type="text" name="first-name" id="first-name" placeholder="Введите ваше имя*" required>
-          <label for="second-name" class="order__first-name">Фамилия:</label>
-          <input type="text" name="second-name" id="second-name" placeholder="Укажите фамилию*" required>
-          <label for="third-name" class="order__first-name">Отчество:</label>
-          <input type="text" name="third-name" id="third-name" placeholder="Отчество, если желаете">
+        <fieldset class="order__block-form">
+          <legend class="order__legend">ФИО</legend>
+          <label class="order__name" for="first-name" class="order__first-name">Имя:</label>
+          <input class="order__input-name" type="text" name="first-name" id="first-name" placeholder="Введите ваше имя*" required>
+          <label class="order__name" for="second-name" class="order__first-name">Фамилия:</label>
+          <input class="order__input-name" type="text" name="second-name" id="second-name" placeholder="Укажите фамилию*" required>
+          <label class="order__name" for="third-name" class="order__first-name">Отчество:</label>
+          <input class="order__input-name" type="text" name="third-name" id="third-name" placeholder="Отчество, если желаете">
         </fieldset>
-        <fieldset class="order__tel">
-          <legend>Тел</legend>
-          <input type="tel" name="telephone" placeholder="+7 ХХХ ХХ ХХ*" required>
+        <fieldset class="order__block-form">
+          <legend class="order__legend">Тел</legend>
+          <input class="order__input-tel" type="tel" name="telephone" placeholder="+7 ХХХ ХХ ХХ*" required>
         </fieldset>
-        <fieldset class="order__email">
-          <legend>E-mail</legend>
-          <input type="email" name="email" placeholder="Ваш Email*">
+        <fieldset class="order__block-form">
+          <legend class="order__legend">E-mail</legend>
+          <input class="order__input-email" type="email" name="email" placeholder="Ваш Email*">
         </fieldset>
-        <fieldset class="order__other">
-          <legend>Доп</legend>
-          <textarea name="wishes" cols="30" rows="8" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+        <fieldset class="order__block-form">
+          <legend class="order__legend">Доп</legend>
+          <textarea class="order__wishes" name="wishes" cols="23" rows="5" placeholder="Опишите все ваши пожелания к заказу"></textarea>
         </fieldset>
+        <p class="order__info">*Поля обязательные для заполнения</p>
         <button class="order__button button" type="submit">Отправить заказ</button>
       </form>
     </main>
     <footer class="page-footer">
-      <section class="social">
-        <h2 class="visually-hidden">Наши страницы в соцсетях</h2>
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__icon social__icon--instagram" href="https://instagram.com">Инстаграм</a>
-          </li>
-          <li class="social__item">
-            <a class="social__icon social__icon--fb" href="https://facebook.com">Фейсбук</a>
-          </li>
-          <li class="social__item">
-            <a class="social__icon social__icon--twitter" href="https://twitter.com">Твиттер</a>
-          </li>
-        </ul>
-      </section>
-      <section class="copyright">
-        <h2 class="visually-hidden">Разработчики сайта</h2>
-        <p class="copyright__dev">
-          Разработано
-          <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__icon">Продвинутый HTML и CSS</a>
-        </p>
-      </section>
+      <div class="page-footer__wrapper">
+        <a class="page-footer__logo"></a>
+        <section class="social">
+          <h2 class="visually-hidden">Наши страницы в соцсетях</h2>
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__icon social__icon--instagram" href="https://instagram.com">Инстаграм</a>
+            </li>
+            <li class="social__item">
+              <a class="social__icon social__icon--fb" href="https://facebook.com">Фейсбук</a>
+            </li>
+            <li class="social__item">
+              <a class="social__icon social__icon--twitter" href="https://twitter.com">Твиттер</a>
+            </li>
+          </ul>
+        </section>
+        <section class="copyright">
+          <h2 class="visually-hidden">Разработчики сайта</h2>
+          <p class="copyright__dev">
+            Разработано
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" class="copyright__icon">Продвинутый HTML и CSS</a>
+          </p>
+        </section>
+      </div>
     </footer>
   </body>
 </html>

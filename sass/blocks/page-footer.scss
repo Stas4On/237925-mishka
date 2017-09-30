@@ -1,0 +1,13 @@
+.page-footer {
+  margin: 0 auto;
+
+  @include page-padding;
+  background-color: $backcolor;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  .page-footer__wrapper {
+    width: 260px;
+    margin: 0 auto;
+  }
+}

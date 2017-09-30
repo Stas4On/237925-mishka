@@ -1,0 +1,19 @@
+.production {
+  width: 320px;
+
+  @include page-padding;
+  margin: 0 auto;
+  padding-bottom: 30px;
+
+  .production__title {
+    @include title-medium;
+    padding-left: 90px;
+    margin-top: 30px;
+    margin-bottom: 25px;
+  }
+
+  .production__video-description {
+    @include indent-reset;
+    margin-bottom: 25px;
+  }
+}
