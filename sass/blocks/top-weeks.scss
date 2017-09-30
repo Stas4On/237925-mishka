@@ -1,6 +1,7 @@
 .top-weeks {
   width: 320px;
   margin: 0 auto;
+
   @include page-padding;
   padding-top: 30px;
   display: flex;
@@ -8,6 +9,7 @@
 
   .top-weeks__title {
     @include style-h2;
+
     @include indent-reset;
   }
 

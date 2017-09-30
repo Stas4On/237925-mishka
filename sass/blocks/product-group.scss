@@ -1,15 +1,26 @@
 .product-group {
+  @media (min-width: $medium-width) {
+    @include page-padding-m;
+  }
 
   .product-group__list{
     @include list-style-reset;
+    width: 320px;
+    margin: 0 auto;
+
+    @media (min-width: $medium-width){
+      display: flex;
+      justify-content: center;
+    }
   }
 
   .product-group__item {
-    width: 100%;
+    width: 320px;
     background-color: $prodgroup-color;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+    @media (min-width: $medium-width) {
+     width: 334px;
+    }
 
     &--lighter {
       background-color: $prodgroup-l-color;
@@ -26,7 +37,6 @@
     padding-top: 30px;
     padding-bottom: 25px;
     padding-right: 160px;
-    width: 320px;
     padding-left: 30px;
 
     &::after {
@@ -35,7 +45,7 @@
       transform: translateY(-31px);
       opacity: 0.5;
       top: 50%;
-      right: 0;
+      right: 30px;
       width: 62px;
       height: 62px;
       background: url('../img/icon-interior.svg') no-repeat center;
