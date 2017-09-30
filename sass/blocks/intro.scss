@@ -1,0 +1,25 @@
+.intro {
+  background-color: $backcolor;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &--home {
+    background: url(../../img/hero-mobile@1x.jpg) no-repeat center -20px;
+  }
+}
+
+.intro__title {
+  @include indent-reset;
+  @include page-padding;
+  font-weight: bold;
+  font-size: 27px;
+  line-height: 30px;
+  color: $sfont-color;
+  width: 320px;
+  text-align: center;
+  padding-top: 70px;
+  padding-bottom: 75px;
+  &--home {
+    padding-bottom: 120px;
+  }
+}

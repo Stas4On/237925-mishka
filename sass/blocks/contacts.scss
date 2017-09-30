@@ -1,0 +1,39 @@
+.contacts {
+  width: 320px;
+  margin: 0 auto;
+  @include page-padding;
+  padding-bottom: 40px;
+
+  .contacts__title {
+    @include style-h2;
+    font-size: 18px;
+  }
+
+  .contacts__item {
+    margin-bottom: 40px;
+  }
+
+  .contacts__email-title,
+  .contacts__adress-title {
+    display: inline-block;
+    width: 70px;
+    vertical-align: top;
+  }
+
+  .contacts__email-link {
+    color: $mfont-color;
+    border-bottom: 1px solid $prodgroup-l-color;
+    padding-bottom: 5px;
+  }
+
+  .contacts__adress {
+    @include indent-reset;
+    display: inline-block;
+    width: 185px;
+  }
+
+  .contacts__map {
+    display: block;
+    margin-bottom: 30px;
+  }
+}

@@ -1,0 +1,23 @@
+.copyright {
+  width: 260px;
+  display: flex;
+  justify-content: center;
+
+  .copyright__dev {
+    @include indent-reset;
+
+    font-size: 19px;
+    line-height: 18px;
+    font-weight: bold;
+    color: $sfont-color;
+  }
+
+  .copyright__link {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0;
+    @include size(30px, 40px);
+    //временно
+    border: 1px solid black;
+  }
+}

@@ -1,0 +1,18 @@
+.controls {
+    margin: 0 auto;
+  .controls__button {
+    @include btn-reset;
+    font-size: 0;
+    border: 1px solid $separator-color;
+    width: 130px;
+    height: 52px;
+    margin-bottom: 35px;
+    &--left {
+      background: url(../img/icon-left-arrow.svg) no-repeat center;
+    }
+    &--right {
+      margin-left: -4px;
+      background: url(../img/icon-right-arrow.svg) no-repeat center;
+    }
+  }
+}
