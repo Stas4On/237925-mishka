@@ -1,5 +1,6 @@
 .order {
   width: 320px;
+
   @include page-padding;
   padding-top: 25px;
   padding-bottom: 50px;
@@ -27,6 +28,7 @@
 
   .order__type {
     display: block;
+
     @include text-item-form;
     padding-left: 60px;
     padding-top: 20px;
@@ -67,6 +69,7 @@
 
   .order__color-checkbox {
     display: block;
+
     @include text-item-form;
     padding-left: 60px;
     padding-top: 20px;
@@ -75,6 +78,7 @@
 
   .order__wishes {
     outline: none;
+
     @include indent-reset;
     padding: 15px;
     border: 2px solid $sfont-color;
