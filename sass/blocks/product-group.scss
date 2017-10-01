@@ -1,12 +1,19 @@
 .product-group {
+
   @media (min-width: $medium-width) {
     @include page-padding-m;
   }
 
+  @media (min-width: $large-width) {
+      @include page-padding-l;
+    }
+
+  .product-group__wrapper {
+    text-align: center;
+  }
+
   .product-group__list{
     @include list-style-reset;
-    width: 320px;
-    margin: 0 auto;
 
     @media (min-width: $medium-width){
       display: flex;
@@ -15,12 +22,8 @@
   }
 
   .product-group__item {
-    width: 320px;
     background-color: $prodgroup-color;
-
-    @media (min-width: $medium-width) {
-     width: 334px;
-    }
+    width: 100%;
 
     &--lighter {
       background-color: $prodgroup-l-color;
@@ -38,6 +41,8 @@
     padding-bottom: 25px;
     padding-right: 160px;
     padding-left: 30px;
+    width: 100%;
+    text-align: left;
 
     &::after {
       content: "";

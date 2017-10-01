@@ -1,7 +1,12 @@
 .copyright {
-  width: 260px;
+  width: 185px;
   display: flex;
   justify-content: center;
+  margin: 0 auto;
+
+  @media (min-width: $medium-width) {
+    margin: 0;
+  }
 
   .copyright__dev {
     @include indent-reset;

@@ -1,21 +1,69 @@
 .order {
-  width: 320px;
 
   @include page-padding;
   padding-top: 25px;
   padding-bottom: 50px;
-  margin: 0 auto;
+
+  @media (min-width: $medium-width) {
+    @include page-padding-m;
+    padding-top: 60px;
+  }
+
+  .order__wrapper {
+    width: 260px;
+    margin: 0 auto;
+
+    @media (min-width: $medium-width) {
+      width: 668px;
+    }
+
+    @media (min-width: $large-width) {
+      width: 1050px;
+    }
+  }
 
   .order__preface {
     @include indent-reset
     font-size: 13px;
     line-height: 24px;
+
+    @media (min-width: $medium-width) {
+      font-size: 17px;
+      line-height: 30px;
+    }
+
+    @media (min-width: $large-width) {
+      padding-left: 175px;
+      padding-right: 175px;
+    }
   }
 
   .order__block-form {
+    @include indent-reset;
     margin-top: 25px;
     border: none;
-    border-top: 1px solid $prodgroup-l-color;
+
+    @media (min-width: $medium-width) {
+      margin-top: 0;
+      margin-bottom: 100px;
+      padding-left: 167px;
+      position: relative;
+
+      &--indent {
+        margin-bottom: 25px;
+      }
+
+      &:last-of-type {
+        margin-bottom: 50px;
+      }
+    }
+
+    @media (min-width: $large-width) {
+      padding-left: 175px;
+      &:nth-of-type(n+3) {
+        padding-right: 175px;
+      }
+    }
   }
 
   .order__legend {
@@ -24,6 +72,16 @@
     font-weight: bold;
     text-transform: uppercase;
     color: $prodgroup-l-color;
+
+    @media (min-width: $medium-width) {
+      position: absolute;
+      top: 20px;
+      left: 0;
+    }
+
+    @media (min-width: $large-width) {
+      left: 60px;
+    }
   }
 
   .order__type {
@@ -37,6 +95,7 @@
 
   .order__name {
     @include text-item-form;
+      padding-right: 25px;
   }
 
   .order__input-name {
@@ -47,6 +106,22 @@
     padding-bottom: 15px;
     border-bottom: 2px solid $sfont-color;
     margin-bottom: 25px;
+
+    @media (min-width: $medium-width) {
+      width: 370px;
+      padding-left: 15px;
+      &:first-of-type {
+        width: 423px;
+      }
+    }
+
+    @media (min-width: $large-width) {
+      width: 570px;
+
+      &:first-of-type {
+        width: 620px;
+      }
+    }
   }
 
   .order__input-email {
@@ -56,6 +131,10 @@
     padding-top: 15px;
     padding-bottom: 15px;
     border-bottom: 2px solid $sfont-color;
+
+    @media (min-width: $medium-width) {
+      padding-left: 15px;
+    }
   }
 
   .order__input-tel {
@@ -65,6 +144,10 @@
     padding-top: 15px;
     padding-bottom: 15px;
     border-bottom: 1px solid $sfont-color;
+
+    @media (min-width: $medium-width) {
+      padding-left: 15px;
+    }
   }
 
   .order__color-checkbox {
@@ -74,19 +157,53 @@
     padding-left: 60px;
     padding-top: 20px;
     padding-bottom: 20px;
+
+    @media (min-width: $medium-width) {
+      width: 230px;
+      display: inline-block;
+    }
   }
 
   .order__wishes {
     outline: none;
+    width: 100%;
 
     @include indent-reset;
     padding: 15px;
     border: 2px solid $sfont-color;
   }
 
+  .order__footer-form {
+    @media (min-width: $medium-width) {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    @media (min-width: $large-width) {
+      padding-left: 175px;
+      padding-right: 175px;
+    }
+  }
+
   .order__info {
     font-size: 14px;
     line-height: 16px;
     margin-bottom: 30px;
+
+    @media (min-width: $medium-width) {
+      font-size: 17px;
+      line-height: 30px;
+      width: 334px;
+      margin: 0;
+      vertical-align: middle;
+    }
+  }
+
+  .order__button {
+    @media (min-width: $medium-width) {
+      width: 230px;
+    }
   }
 }

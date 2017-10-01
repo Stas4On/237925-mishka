@@ -1,8 +1,13 @@
 .social {
-  width: 260px;
+  width: 185px;
   display: flex;
   justify-content: center;
+  margin: 0 auto;
   margin-bottom: 20px;
+
+  @media (min-width: $medium-width) {
+    margin: 0;
+  }
 
   .social__list {
     @include list-style-reset;

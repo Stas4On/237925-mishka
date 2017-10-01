@@ -12,6 +12,15 @@
   color: $sfont-color;
   margin: 0;
   padding: 0;
+
+  @media (min-width: $medium-width) {
+    font-size: 43px;
+    line-height: 50px;
+  }
+  @media (min-width: $large-width) {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 @mixin title-medium {
@@ -30,6 +39,10 @@
   color: $sfont-color;
   margin: 0;
   padding: 0;
+
+  @media (min-width: $medium-width) {
+    font-size: 19px;
+  }
 }
 
 ///миксин сброса стилей у ul, ol
@@ -63,4 +76,9 @@
 @mixin page-padding-m {
   padding-left: 50px;
   padding-right: 50px;
+}
+
+@mixin page-padding-l {
+  padding-left: 100px;
+  padding-right: 100px;
 }
