@@ -1,5 +1,4 @@
 .contacts {
-  @include page-padding;
   padding-bottom: 40px;
 
   @media (min-width: $medium-width) {
@@ -17,6 +16,7 @@
   .contacts__wrapper {
     width: 320px;
     margin: 0 auto;
+    @include page-padding;
 
     &--center {
       text-align: center;
@@ -29,9 +29,16 @@
     }
 
     @media (min-width: $large-width) {
-      width: 525px;
+      padding: 0;
+      width: 50%;
       margin: 0;
       padding-left: 175px;
+      text-align: left;
+      padding-bottom: 52px;
+
+      &--center {
+        padding-bottom: 0;
+      }
     }
   }
 
@@ -61,6 +68,11 @@
 
     @media (min-width: $medium-width) {
       width: 50%;
+    }
+
+    @media (min-width: $large-width) {
+      width: auto;
+      padding-bottom: 30px;
     }
   }
 
@@ -96,10 +108,13 @@
     width: 320px;
     @media (min-width: $medium-width) {
       width: auto;
+      overflow: hidden;
     }
 
     @media (min-width: $large-width) {
-      width: 525px;
+      margin: 0;
+      width: 50%;
+      height: 460px;
     }
     //временно
     border: 1px solid black;
@@ -109,5 +124,15 @@
     @media (min-width: $medium-width) {
       height: 480px;
     }
+
+    @media (min-width: $large-width) {
+      height: 460px;
+    }
+  }
+}
+
+.contacts__write-us {
+  @media (min-width: $large-width) {
+    margin-top: -88px;
   }
 }

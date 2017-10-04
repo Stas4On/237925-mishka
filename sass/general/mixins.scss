@@ -6,6 +6,7 @@
 
 ///миксин стилизации h2
 @mixin style-h2 {
+  font-family: "Open Sans", "Tahoma", sans-serif;
   font-weight: bold;
   font-size: 25px;
   line-height: 30px;
@@ -24,6 +25,7 @@
 }
 
 @mixin title-medium {
+  font-family: "Open Sans", "Tahoma", sans-serif;
   font-weight: bold;
   font-size: 17px;
   line-height: 24px;
@@ -32,7 +34,13 @@
   padding: 0;
 }
 
+@mixin under-header {
+  padding-top: 23px;
+  padding-bottom: 23px;
+}
+
 @mixin text-item-form {
+  font-family: "Open Sans", "Tahoma", sans-serif;
   font-weight: bold;
   font-size: 17px;
   line-height: 18px;
