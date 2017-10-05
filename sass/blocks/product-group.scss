@@ -1,15 +1,29 @@
 .product-group {
 
+  @media (min-width: $medium-width) {
+    @include page-padding-m;
+  }
+
+  @media (min-width: $large-width) {
+      @include page-padding-l;
+    }
+
+  .product-group__wrapper {
+    text-align: center;
+  }
+
   .product-group__list{
     @include list-style-reset;
+
+    @media (min-width: $medium-width){
+      display: flex;
+      justify-content: center;
+    }
   }
 
   .product-group__item {
-    width: 100%;
     background-color: $prodgroup-color;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 100%;
 
     &--lighter {
       background-color: $prodgroup-l-color;
@@ -26,8 +40,9 @@
     padding-top: 30px;
     padding-bottom: 25px;
     padding-right: 160px;
-    width: 320px;
     padding-left: 30px;
+    width: 100%;
+    text-align: left;
 
     &::after {
       content: "";
@@ -35,7 +50,7 @@
       transform: translateY(-31px);
       opacity: 0.5;
       top: 50%;
-      right: 0;
+      right: 30px;
       width: 62px;
       height: 62px;
       background: url('../img/icon-interior.svg') no-repeat center;

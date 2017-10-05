@@ -4,12 +4,12 @@
 @import "general/fonts";
 @import "general/global";
 
+@import "blocks/button";
 @import "blocks/visually-hidden";
 @import "blocks/site-list";
 @import "blocks/intro";
 @import "blocks/product-group";
 @import "blocks/top-weeks";
-@import "blocks/button";
 @import "blocks/advantages";
 @import "blocks/reviews";
 @import "blocks/controls";
@@ -21,3 +21,4 @@
 @import "blocks/product";
 @import "blocks/production";
 @import "blocks/order";
+@import "blocks/modal";

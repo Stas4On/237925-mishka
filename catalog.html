@@ -10,20 +10,29 @@
       <nav class="main-nav">
         <ul class="main-nav__list site-list">
           <li class="site-list__item site-list__item--logo">
-            <a href="#" class="site-list__logo"></a>
+            <a class="site-list__logo" href="index.html"></a>
             <button class="site-list__toggle site-list__toggle--close" type="button">Открыть меню</button>
           </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="catalog.html">Каталог товаров</a>
+          <li class="site-list__item site-list__item--catalog">
+            <a class="site-list__link site-list__link--catalog" href="catalog.html">Каталог товаров</a>
           </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="form.html">Вязание на заказ</a>
+          <li class="site-list__item site-list__item--form">
+            <a class="site-list__link site-list__link--form" href="form.html">Вязание на заказ</a>
           </li>
-          <li class="site-list__item">
+          <li class="site-list__item  site-list__item--search">
             <a class="site-list__link site-list__link--search" href="#">Поиск по сайту</a>
           </li>
-          <li class="site-list__item">
+          <li class="site-list__item site-list__item--cart">
             <a class="site-list__link site-list__link--cart" href="#">Корзина: пока пуста</a>
+          </li>
+          <li class="site-list__item site-list__item--hidden">
+            <a class="site-list__link site-list__link--new" href="#">Новые поступления</a>
+          </li>
+          <li class="site-list__item site-list__item--hidden">
+            <a class="site-list__link site-list__link--sale" href="#">Распродажа</a>
+          </li>
+          <li class="site-list__item site-list__item--hidden">
+            <a class="site-list__link site-list__link--weight" href="#">Бесплатная доставка по Роcсии</a>
           </li>
         </ul>
       </nav>
@@ -34,49 +43,68 @@
       </div>
       <section class="products">
         <h2 class="visually-hidden">Товары</h2>
-        <article class="products__item product">
-          <img class="product__photo" src="img/photo-hare-mobile@1x.jpg" alt="Вязанный заяц" width="260" height="195">
-          <h1 class="product__title">Зайчик-попрыгайчик</h1>
-          <p class="product__description">Рост 30 см, вес 200 г</p>
-          <div class="product__buy">
-            <span class="product__cost">1 200 руб.</span>
-            <a href="#">Добавить в корзину</a>
-          </div>
-        </article>
-        <article class="products__item product">
-          <img class="product__photo" src="img/photo-bowl-mobile@1x.jpg" alt="Вязанный заяц" width="260" height="195">
-          <h1 class="product__title">Корзинка для белья</h1>
-          <p class="product__description">Диаметр 15 см, высота 10 см</p>
-          <div class="product__buy">
-            <span class="product__cost">690 руб.</span>
-            <a href="#">Добавить в корзину</a>
-          </div>
-        </article>
-        <article class="products__item product">
-          <img class="product__photo" src="img/photo-toys-mobile@1x.jpg" alt="Вязанный заяц" width="260" height="195">
-          <h1 class="product__title">Большая корзинка для игрушек</h1>
-          <p class="product__description">Диаметр 30 см, высота 30 см</p>
-          <div class="product__buy">
-            <span class="product__cost">1 500 руб.</span>
-            <a href="#">Добавить в корзину</a>
-          </div>
-        </article>
+        <div class="products__wrapper">
+          <article class="products__item product">
+            <img class="product__photo" src="img/photo-hare-mobile@1x.jpg" alt="Вязанный заяц" width="260" height="195">
+            <div class="product__wrapper">
+              <div class="production__title-wrap">
+                <h1 class="product__title">Зайчик-попрыгайчик</h1>
+                <p class="product__description">Рост 30 см, вес 200 г</p>
+              </div>
+              <div class="product__buy">
+                <span class="product__cost">1 200 руб.</span>
+                <a class="product-cart" href="#">Добавить в корзину</a>
+              </div>
+            </div>
+          </article>
+          <article class="products__item product">
+            <img class="product__photo" src="img/photo-bowl-mobile@1x.jpg" alt="Вязанный заяц" width="260" height="195">
+            <div class="product__wrapper">
+              <div class="production__title-wrap">
+                <h1 class="product__title">Корзинка для белья</h1>
+                <p class="product__description">Диаметр 15 см, высота 10 см</p>
+              </div>
+              <div class="product__buy">
+                <span class="product__cost">690 руб.</span>
+                <a class="product-cart" href="#">Добавить в корзину</a>
+              </div>
+            </div>
+          </article>
+          <article class="products__item product">
+            <img class="product__photo" src="img/photo-toys-mobile@1x.jpg" alt="Вязанный заяц" width="260" height="195">
+            <div class="product__wrapper">
+              <div class="production__title-wrap">
+                <h1 class="product__title">Большая корзинка для&nbsp;игрушек</h1>
+                <p class="product__description">Диаметр 30 см, высота 30 см</p>
+              </div>
+              <div class="product__buy">
+                <span class="product__cost">1 500 руб.</span>
+                <a class="product-cart" href="#">Добавить в корзину</a>
+              </div>
+            </div>
+          </article>
+        </div>
       </section>
       <section class="production">
-        <h2 class="production__title">Процесс производства</h2>
-        <div class="production__video-wrapper">
-          <img class="production__image" src="img/video-mobile@1x.jpg" alt="Вязанная корзинка">
-          <a href="index.html" class="production__video"></a>
-        </div>
-        <p class="production__video-description">
-          По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
-        </p>
-        <a href="#" class="production__button button">Сделать заказ</a>
+        <div class="production__wrapper">
+          <div class="production__desktop-wrap">
+            <h2 class="production__title">Процесс производства</h2>
+            <a href="index.html" class="production__video">
+              <img class="production__image" src="img/video-mobile@1x.jpg" alt="Вязанная корзинка">
+            </a>
+            <p class="production__video-description">
+              По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
+            </p>
+            <a href="#" class="production__button button">Сделать заказ</a>
+                    </div>
+          </div>
       </section>
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <a class="page-footer__logo"></a>
+        <div class="page-footer__logo-wrapper">
+          <a class="page-footer__logo"></a>
+        </div>
         <section class="social">
           <h2 class="visually-hidden">Наши страницы в соцсетях</h2>
           <ul class="social__list">
@@ -95,7 +123,7 @@
           <h2 class="visually-hidden">Разработчики сайта</h2>
           <p class="copyright__dev">
             Разработано
-            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" class="copyright__icon">Продвинутый HTML и CSS</a>
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>
           </p>
         </section>
       </div>

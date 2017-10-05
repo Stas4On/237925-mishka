@@ -1,5 +1,24 @@
 .products {
-  width: 320px;
   @include page-padding;
-  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  @media (min-width: $medium-width) {
+    @include page-padding-m;
+  }
+
+  .products__wrapper {
+    width: 260px;
+    margin: 0 auto;
+
+    @media (min-width: $medium-width) {
+      width: 668px;
+    }
+
+    @media (min-width: $large-width) {
+      display: flex;
+      flex-wrap: wrap;
+      width: 1050px;
+    }
+  }
 }

@@ -6,15 +6,21 @@
 
   &--home {
     background: url('../img/hero-mobile@1x.jpg') no-repeat center -20px;
+
+    @media (min-width: $medium-width) {
+      background: url('../img/hero-mobile@1x.jpg') no-repeat center top;
   }
+
+  @media (min-width: $medium-width) {
+    margin-top: -70px;
+  }
+}
   .intro__title {
     @include indent-reset;
 
     @include page-padding;
-    font-weight: bold;
+    @include style-h2;
     font-size: 27px;
-    line-height: 30px;
-    color: $sfont-color;
     width: 320px;
     text-align: center;
     padding-top: 70px;
@@ -22,6 +28,14 @@
 
     &--home {
       padding-bottom: 120px;
+    }
+
+    @media (min-width: $medium-width) {
+      width: 540px;
+    }
+
+    @media (min-width: $large-width) {
+      width: 700px;
     }
   }
 }

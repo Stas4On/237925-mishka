@@ -1,14 +1,42 @@
 .top-weeks {
-  width: 320px;
-  margin: 0 auto;
-  @include page-padding;
-  padding-top: 30px;
-  display: flex;
-  flex-direction: column;
+    @include page-padding;
+    padding-top: 30px;
+
+    @media (min-width: $medium-width) {
+      @include page-padding-m;
+    }
+
+    @media (min-width: $large-width) {
+      @include page-padding-l;
+      padding-top: 130px;
+    }
+
+  .top-weeks__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 320px;
+    margin: 0 auto;
+
+    @media (min-width: $medium-width) {
+      position: relative;
+      width: 668px;
+    }
+
+    @media (min-width: $large-width) {
+      width: 1050px;
+      padding-left: 175px;
+    }
+  }
 
   .top-weeks__title {
     @include style-h2;
+
     @include indent-reset;
+
+    @media (min-width: $medium-width) {
+      margin-bottom: 55px;
+    }
   }
 
   .top-weeks__subtitle {
@@ -18,11 +46,42 @@
     font-weight: bold;
     line-height: 20px;
     padding-top: 5px;
+
+    @media (min-width: $medium-width) {
+      position: absolute;
+      top: 0;
+      right: 20px;
+      width: 100px;
+      text-align: center;
+    }
+
+    @media (min-width: $large-width) {
+      left: 45px;
+    }
+  }
+
+  .top-weeks__description {
+    @include indent-reset;
+    width: 260px;
+
+    @media (min-width: $medium-width) {
+      margin-bottom: 55px;
+      width: 290px;
+    }
   }
 
   .top-weeks__table {
     width: 260px;
     border-collapse: collapse;
+
+    @media (min-width: $medium-width) {
+      width: 290px;
+      margin-bottom: 55px;
+    }
+
+    @media (min-width: $large-width) {
+      margin-bottom: 105px;
+    }
   }
 
   .top-weeks__field {
@@ -36,8 +95,24 @@
   }
 
   .top-weeks__img {
-    padding-top: 30px;
-    padding-bottom: 25px;
+    margin-top: 30px;
+    margin-bottom: 25px;
+
+    @media (min-width: $medium-width) {
+      //временно
+      margin: 0;
+      width: 334px;
+      height: 404px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: -1;
+    }
+
+    @media (min-width: $large-width) {
+      width: 525px;
+      height: 640px;
+    }
   }
 
   .top-weeks__cost {
@@ -46,5 +121,12 @@
     line-height: 20px;
     text-align: center;
     margin-bottom: 25px;
+    max-width: 290px;
+  }
+}
+
+.top-weeks__button {
+  @media (min-width: $medium-width) {
+    width: 290px;
   }
 }

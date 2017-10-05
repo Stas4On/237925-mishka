@@ -6,8 +6,49 @@
   padding-top: 20px;
   padding-bottom: 20px;
 
+  @media (min-width: $medium-width) {
+    @include page-padding-m;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  @media (min-width: $large-width) {
+    @include page-padding-l;
+  }
+
   .page-footer__wrapper {
-    width: 260px;
     margin: 0 auto;
+    text-align: center;
+
+    @media (min-width: $medium-width) {
+      display: flex;
+      justify-content: space-between
+    }
+  }
+
+  .page-footer__logo-wrapper {
+    display: none;
+
+    @media (min-width: $medium-width) {
+      display: inline-block;
+      width: 185px;
+    }
+  }
+
+  .page-footer__logo {
+    display: block;
+    box-sizing: content-box;
+    background: url('../img/logo-mobile.svg') no-repeat center;
+    text-align: left;
+
+    @include size(86px, 36px);
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }

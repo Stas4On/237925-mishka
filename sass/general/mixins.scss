@@ -6,15 +6,26 @@
 
 ///миксин стилизации h2
 @mixin style-h2 {
+  font-family: "Open Sans", "Tahoma", sans-serif;
   font-weight: bold;
   font-size: 25px;
   line-height: 30px;
   color: $sfont-color;
   margin: 0;
   padding: 0;
+
+  @media (min-width: $medium-width) {
+    font-size: 43px;
+    line-height: 50px;
+  }
+  @media (min-width: $large-width) {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 @mixin title-medium {
+  font-family: "Open Sans", "Tahoma", sans-serif;
   font-weight: bold;
   font-size: 17px;
   line-height: 24px;
@@ -23,13 +34,23 @@
   padding: 0;
 }
 
+@mixin under-header {
+  padding-top: 23px;
+  padding-bottom: 23px;
+}
+
 @mixin text-item-form {
+  font-family: "Open Sans", "Tahoma", sans-serif;
   font-weight: bold;
   font-size: 17px;
   line-height: 18px;
   color: $sfont-color;
   margin: 0;
   padding: 0;
+
+  @media (min-width: $medium-width) {
+    font-size: 19px;
+  }
 }
 
 ///миксин сброса стилей у ul, ol
@@ -58,4 +79,14 @@
 @mixin page-padding {
   padding-left: 30px;
   padding-right: 30px;
+}
+
+@mixin page-padding-m {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+@mixin page-padding-l {
+  padding-left: 100px;
+  padding-right: 100px;
 }
