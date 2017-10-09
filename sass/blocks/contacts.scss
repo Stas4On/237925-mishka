@@ -1,8 +1,6 @@
 .contacts {
-  padding-bottom: 40px;
 
   @media (min-width: $medium-width) {
-    padding-top: 60px;
     padding-right: 0;
     padding-left: 0;
   }
@@ -11,12 +9,16 @@
     @include page-padding-l;
     display: flex;
     flex-wrap: wrap;
+    padding-top: 70px;
+    padding-bottom: 30px;
   }
 
   .contacts__wrapper {
     width: 320px;
     margin: 0 auto;
     @include page-padding;
+    padding-top: 35px;
+    padding-bottom: 40px;
 
     &--center {
       text-align: center;
@@ -24,17 +26,22 @@
 
     @media (min-width: $medium-width) {
       width: 768px;
+      padding-top: 60px;
+      padding-bottom: 50px;
 
       @include page-padding-m;
     }
 
     @media (min-width: $large-width) {
       padding: 0;
+      padding-top: 70px;
       width: 50%;
       margin: 0;
       padding-left: 175px;
       text-align: left;
       padding-bottom: 52px;
+      display: flex;
+      flex-direction: column;
 
       &--center {
         padding-bottom: 0;
@@ -48,15 +55,19 @@
 
     @media (min-width: $medium-width) {
       order: -1;
-      margin-bottom: 55px;
+      margin-bottom: 20px;
+    }
+
+    @media (min-width: $large-width) {
+      margin-bottom: 50px;
     }
   }
 
   .contacts__wrap {
-    margin-bottom: 40px;
 
     @media (min-width: $medium-width) {
       display: flex;
+      font-size: 17px;
     }
 
     @media (min-width: $large-width) {
@@ -66,6 +77,8 @@
 
   .contacts__item {
 
+    margin-top: 30px;
+
     @media (min-width: $medium-width) {
       width: 50%;
     }
@@ -73,6 +86,7 @@
     @media (min-width: $large-width) {
       width: auto;
       padding-bottom: 30px;
+      margin-top: 0;
     }
   }
 
@@ -81,7 +95,11 @@
     display: inline-block;
     padding-right: 25px;
     vertical-align: top;
-    max-width: 75px;
+    max-width: 80px;
+
+    @media (min-width: $medium-width) {
+      padding-right: 20px;
+    }
   }
 
   .contacts__email-link {
@@ -93,7 +111,7 @@
   .contacts__adress {
     @include indent-reset;
     display: inline-block;
-    width: 185px;
+    width: 150px;
 
     @media (min-width: $medium-width) {
       width: 225px;
@@ -103,11 +121,13 @@
   .contacts__map {
     display: block;
     margin: 0 auto;
-    margin-bottom: 30px;
-    text-align: center;
-    width: 320px;
+    line-height: 0;
+    font-size: 0;
+    /* text-align: center;
+    width: 320px; */
     @media (min-width: $medium-width) {
       width: auto;
+      height: 460px;
       overflow: hidden;
     }
 
@@ -132,7 +152,12 @@
 }
 
 .contacts__write-us {
+  @media (min-width: $medium-width) {
+    width: 230px;
+  }
+
   @media (min-width: $large-width) {
-    margin-top: -88px;
+    margin-top: -125px;
+
   }
 }

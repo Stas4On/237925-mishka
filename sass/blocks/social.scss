@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 
   @media (min-width: $medium-width) {
     margin: 0;
@@ -17,9 +17,14 @@
     display: inline-block;
     vertical-align: middle;
     font-size: 0;
+    margin-right: 15px;
 
     @include size (40px, 40px);
     //временно
     border: 1px solid black;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
   }
 }

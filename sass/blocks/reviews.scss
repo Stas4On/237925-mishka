@@ -1,17 +1,19 @@
 .reviews {
   @include page-padding;
   padding-top: 30px;
+  padding-bottom: 50px;
 
   @media (min-width: $medium-width) {
     @include page-padding-m;
     padding-top: 80px;
-    padding-bottom: 50px;
-    background: url('../img/review@1x.jpg') no-repeat left center;
+    padding-bottom: 135px;
+    background: url('../img/review@1x.jpg') no-repeat left top;
   }
 
   @media (min-width: $large-width) {
     @include page-padding-l;
-    background: url('../img/review@1x.jpg') no-repeat 100px center;
+    background: url('../img/review@1x.jpg') no-repeat 100px top;
+    padding-bottom: 190px;
   }
   .reviews__wrapper{
     width: 260px;
@@ -44,23 +46,31 @@
     font-weight: bold;
     line-height: 24px;
     color: $sfont-color;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 
     @media (min-width: $medium-width){
       width: 334px;
+      margin: 0;
+
+      b {
+        font-size: 18px;
+      }
     }
   }
 
   .reviews__text {
     @include indent-reset;
-    margin-bottom: 35px;
-    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-top: 20px;
     @media (min-width: $medium-width){
       font-size: 17px;
+      margin-top: 45px;
+      margin-bottom: 55px;
     }
 
     @media (min-width: $large-width) {
       width: 785px;
+      margin-bottom: 35px;
     }
   }
 
@@ -68,6 +78,14 @@
     line-height: 30px;
     font-weight: normal;
     color: $mfont-color;
+  }
+
+  .reviews__btn-wrap {
+    margin-bottom: 40px;
+
+    @media (min-width: $medium-width){
+      margin: 0;
+    }
   }
 
   .reviews__button {
