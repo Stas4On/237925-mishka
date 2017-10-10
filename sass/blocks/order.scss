@@ -2,12 +2,17 @@
 
   @include page-padding;
   padding-top: 25px;
-  padding-bottom: 50px;
+  padding-bottom: 55px;
 
   @media (min-width: $medium-width) {
     @include page-padding-m;
-    padding-top: 60px;
+    padding-top: 75px;
   }
+
+  @media (min-width: $large-width) {
+      padding-top: 125px;
+      padding-bottom: 50px;
+    }
 
   .order__wrapper {
     width: 260px;
@@ -30,6 +35,7 @@
     @media (min-width: $medium-width) {
       font-size: 17px;
       line-height: 30px;
+      margin-bottom: 55px;
     }
 
     @media (min-width: $large-width) {
@@ -45,16 +51,18 @@
 
     @media (min-width: $medium-width) {
       margin-top: 0;
-      margin-bottom: 100px;
+      margin-bottom: 70px;
       padding-left: 167px;
       position: relative;
 
       &--indent {
-        margin-bottom: 25px;
-      }
+        margin-top: 85px;
+        margin-bottom: 20px;
+        }
 
       &:last-of-type {
-        margin-bottom: 50px;
+        margin-bottom: 45px;
+        margin-top: 90px;
       }
     }
 
@@ -63,18 +71,48 @@
       &:nth-of-type(n+3) {
         padding-right: 175px;
       }
+
+      &:last-of-type {
+        margin-bottom: 40px;
+      }
     }
   }
 
   .order__legend {
+    position: relative;
     font-size: 17px;
     line-height: 16px;
     font-weight: bold;
     text-transform: uppercase;
     color: $prodgroup-l-color;
+    margin-bottom: 20px;
+    width: 100%;
+
+    &--indent {
+      margin-bottom: 5px;
+    }
+
+    @media (max-width: $mobile-width-only) {
+      &::after {
+        content: "";
+        position: absolute;
+        top: 7px;
+        right: 0;
+        width: 198px;
+        height: 1px;
+        background-color: $prodgroup-l-color;
+      }
+
+      &--line {
+        &::after {
+          width: 180px;
+        }
+      }
+    }
 
     @media (min-width: $medium-width) {
       position: absolute;
+      width: auto;
       top: 20px;
       left: 0;
     }
@@ -88,9 +126,16 @@
     display: block;
 
     @include text-item-form;
-    padding-left: 60px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-left: 65px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+
+    @media (min-width: $medium-width) {
+      padding-left: 80px;
+      margin-bottom: 25px;
+      padding-top: 15px;
+      padding-bottom: 20px;
+    }
   }
 
   .order__name {
@@ -99,17 +144,22 @@
   }
 
   .order__input-name {
+    @include text-item-form;
+    font-weight: normal;
     border: none;
     outline: none;
     width: 100%;
-    padding-top: 15px;
+    padding-top: 10px;
     padding-bottom: 15px;
     border-bottom: 2px solid $sfont-color;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 
     @media (min-width: $medium-width) {
       width: 370px;
       padding-left: 15px;
+      padding-top: 20px;
+      margin-bottom: 12px;
+
       &:first-of-type {
         width: 423px;
       }
@@ -125,28 +175,39 @@
   }
 
   .order__input-email {
+    @include text-item-form;
+    font-weight: normal;
     border: none;
     outline: none;
     width: 100%;
     padding-top: 15px;
     padding-bottom: 15px;
     border-bottom: 2px solid $sfont-color;
+    margin-bottom: 10px;
 
     @media (min-width: $medium-width) {
       padding-left: 15px;
+      padding-bottom: 12px;
     }
   }
 
   .order__input-tel {
+    @include text-item-form;
+    font-weight: normal;
     border: none;
     outline: none;
     width: 100%;
     padding-top: 15px;
     padding-bottom: 15px;
     border-bottom: 1px solid $sfont-color;
+    margin-bottom: 10px;
 
     @media (min-width: $medium-width) {
       padding-left: 15px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid $sfont-color;
+      font-size: 19px;
+      margin-bottom: 0;
     }
   }
 
@@ -154,17 +215,31 @@
     display: block;
 
     @include text-item-form;
-    padding-left: 60px;
-    padding-top: 20px;
+    padding-left: 65px;
+    padding-top: 23px;
     padding-bottom: 20px;
 
     @media (min-width: $medium-width) {
       width: 230px;
       display: inline-block;
+      padding-left: 80px;
+      margin-bottom: 15px;
+      padding-top: 20px;
+      padding-bottom: 23px;
+
+      &:nth-child(even) {
+        margin-right: 30px;
+      }
+    }
+
+    @media (min-width: $large-width) {
+      margin-right: 30px;
     }
   }
 
   .order__wishes {
+    @include text-item-form;
+    font-weight: normal;
     outline: none;
     width: 100%;
 
@@ -191,6 +266,7 @@
     font-size: 14px;
     line-height: 16px;
     margin-bottom: 30px;
+    margin-top: 10px;
 
     @media (min-width: $medium-width) {
       font-size: 17px;
@@ -198,6 +274,7 @@
       width: 334px;
       margin: 0;
       vertical-align: middle;
+      text-align: right;
     }
   }
 

@@ -1,10 +1,16 @@
 .production {
   @include page-padding;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 25px;
+  padding-bottom: 90px;
 
   @media (min-width: $medium-width) {
     @include page-padding-m;
+    padding-bottom: 110px;
+    padding-top: 20px;
+  }
+
+  @media (min-width: $large-width) {
+    padding-top: 25px;
   }
 
   .production__wrapper {
@@ -34,6 +40,7 @@
       min-height: 455px;
       padding-left: 79px;
       padding-right: 60px;
+      padding-top: 35px;
       border: 1px solid $separator-color;
     }
   }
@@ -42,20 +49,62 @@
     @include title-medium;
     padding-left: 90px;
     margin-bottom: 25px;
+
+    @media (min-width: $medium-width) {
+      font-size: 20px;
+      padding-left: 105px;
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+
+    @media (min-width: $large-width) {
+      padding-left: 0;
+      padding-top: 60px;
+      margin-top: 0;
+    }
   }
 
   .production__video-description {
     @include indent-reset;
-    margin-bottom: 25px;
+    font-size: 13px;
+    line-height: 24px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 
     @media (min-width: $medium-width) and (max-width: $medium-width-only) {
       padding-left: 40px;
       padding-right: 40px;
+      font-size: 15px;
+      line-height: 30px;
+      padding-bottom: 35px;
+    }
+
+    @media (min-width: $large-width) {
+      font-size: 15px;
+      line-height: 30px;
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 45px
     }
   }
 
   .production__video {
     order: -1;
+    position: relative;
+    display: inline-block;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 120px;
+      height: 100px;
+      transform: translate(-50%, -50%);
+      background: url('../img/icon-play.svg') no-repeat center center;
+    }
 
     @media (min-width: $large-width) {
       position: absolute;
@@ -69,22 +118,24 @@
   .production__image {
     @media (min-width: $medium-width) {
       width: 668px;
-      height: 445px;
+      height: 455px;
     }
 
     @media (min-width: $large-width) {
       width: 680px;
-      height: 455px;
     }
   }
 
   .production__button {
+    width: 190px;
+    margin-left: 35px;
+
     @media (min-width: $medium-width) {
       margin: 0 auto;
       width: 585px;
     }
 
-     @media (min-width: $large-width) {
+    @media (min-width: $large-width) {
       width: 100%;
     }
   }

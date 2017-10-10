@@ -8,10 +8,10 @@
   <body>
     <header class="header">
       <nav class="main-nav">
-        <ul class="main-nav__list site-list">
+        <ul class="main-nav__list site-list site-list--closed site-list--nojs">
           <li class="site-list__item site-list__item--logo">
             <a class="site-list__logo" href="index.html"></a>
-            <button class="site-list__toggle site-list__toggle--close" type="button">Открыть меню</button>
+            <button class="site-list__toggle" type="button">Открыть меню</button>
           </li>
           <li class="site-list__item site-list__item--catalog">
             <a class="site-list__link site-list__link--catalog" href="catalog.html">Каталог товаров</a>
@@ -45,10 +45,10 @@
         <h2 class="visually-hidden">Товары</h2>
         <div class="products__wrapper">
           <article class="products__item product">
-            <img class="product__photo" src="img/photo-hare-mobile@1x.jpg" alt="Вязанный заяц" width="260" height="195">
+            <a href="#" class="product__photo-link"><img class="product__photo" src="img/photo-hare-mobile@1x.jpg" alt="Вязанный заяц" width="260" height="195"></a>
             <div class="product__wrapper">
-              <div class="production__title-wrap">
-                <h1 class="product__title">Зайчик-попрыгайчик</h1>
+              <div class="product__title-wrap">
+                <h1 class="product__title"><a class="product__title-link" href="#">Зайчик-попрыгайчик</a></h1>
                 <p class="product__description">Рост 30 см, вес 200 г</p>
               </div>
               <div class="product__buy">
@@ -58,10 +58,10 @@
             </div>
           </article>
           <article class="products__item product">
-            <img class="product__photo" src="img/photo-bowl-mobile@1x.jpg" alt="Вязанный заяц" width="260" height="195">
+            <a href="#" class="product__photo-link"><img class="product__photo" src="img/photo-bowl-mobile@1x.jpg" alt="Вязанная корзинка бело-морковного цвета" width="260" height="195"></a>
             <div class="product__wrapper">
-              <div class="production__title-wrap">
-                <h1 class="product__title">Корзинка для белья</h1>
+              <div class="product__title-wrap">
+                <h1 class="product__title"><a class="product__title-link" href="#">Корзинка для белья</a></h1>
                 <p class="product__description">Диаметр 15 см, высота 10 см</p>
               </div>
               <div class="product__buy">
@@ -71,10 +71,10 @@
             </div>
           </article>
           <article class="products__item product">
-            <img class="product__photo" src="img/photo-toys-mobile@1x.jpg" alt="Вязанный заяц" width="260" height="195">
+            <a href="#" class="product__photo-link"><img class="product__photo" src="img/photo-toys-mobile@1x.jpg" alt="Вместительная корзинка салатового цвета" width="260" height="195"></a>
             <div class="product__wrapper">
-              <div class="production__title-wrap">
-                <h1 class="product__title">Большая корзинка для&nbsp;игрушек</h1>
+              <div class="product__title-wrap">
+                <h1 class="product__title"><a class="product__title-link" href="#">Большая корзинка для&nbsp;игрушек</a></h1>
                 <p class="product__description">Диаметр 30 см, высота 30 см</p>
               </div>
               <div class="product__buy">
@@ -96,8 +96,8 @@
               По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
             </p>
             <a href="#" class="production__button button">Сделать заказ</a>
-                    </div>
           </div>
+        </div>
       </section>
     </main>
     <footer class="page-footer">
@@ -123,8 +123,8 @@
           <h2 class="visually-hidden">Разработчики сайта</h2>
           <p class="copyright__dev">
             Разработано
-            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>
           </p>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>
         </section>
       </div>
     </footer>
@@ -147,5 +147,6 @@
         <button class="choice-size__button button" type="submit">Добавить</button>
       </form>
     </section>
+    <script src="js/mainNav.js"></script>
   </body>
 </html>

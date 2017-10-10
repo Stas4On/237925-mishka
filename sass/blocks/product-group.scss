@@ -2,6 +2,8 @@
 
   @media (min-width: $medium-width) {
     @include page-padding-m;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 
   @media (min-width: $large-width) {
@@ -33,16 +35,23 @@
   .product-group__link {
     position: relative;
     display: inline-block;
+    vertical-align: baseline;
     color: $l-font-color;
     font-size: 19px;
     line-height: 24px;
     font-weight: bold;
-    padding-top: 30px;
-    padding-bottom: 25px;
+    padding-top: 25px;
+    padding-bottom: 30px;
     padding-right: 160px;
     padding-left: 30px;
     width: 100%;
     text-align: left;
+
+    @media (min-width: $medium-width){
+      font-size: 20px;
+      line-height: 30px;
+      padding-left: 35px;
+    }
 
     &::after {
       content: "";
@@ -50,7 +59,7 @@
       transform: translateY(-31px);
       opacity: 0.5;
       top: 50%;
-      right: 30px;
+      right: 25px;
       width: 62px;
       height: 62px;
       background: url('../img/icon-interior.svg') no-repeat center;

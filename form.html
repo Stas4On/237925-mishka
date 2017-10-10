@@ -8,10 +8,10 @@
   <body>
     <header class="header">
       <nav class="main-nav">
-        <ul class="main-nav__list site-list">
+        <ul class="main-nav__list site-list site-list--closed site-list--nojs">
           <li class="site-list__item site-list__item--logo">
             <a class="site-list__logo" href="index.html"></a>
-            <button class="site-list__toggle site-list__toggle--close" type="button">Открыть меню</button>
+            <button class="site-list__toggle" type="button">Открыть меню</button>
           </li>
           <li class="site-list__item site-list__item--catalog">
             <a class="site-list__link site-list__link--catalog" href="catalog.html">Каталог товаров</a>
@@ -94,16 +94,16 @@
             <input class="order__input-name" type="text" name="third-name" id="third-name" placeholder="Отчество, если желаете">
           </fieldset>
           <fieldset class="order__block-form order__block-form--indent">
-            <legend class="order__legend">Тел</legend>
+            <legend class="order__legend order__legend--indent">Тел</legend>
             <input class="order__input-tel" type="tel" name="telephone" placeholder="+7 ХХХ ХХ ХХ*" required>
           </fieldset>
           <fieldset class="order__block-form">
-            <legend class="order__legend">E-mail</legend>
+            <legend class="order__legend order__legend--indent order__legend--line">E-mail</legend>
             <input class="order__input-email" type="email" name="email" placeholder="Ваш Email*">
           </fieldset>
           <fieldset class="order__block-form">
             <legend class="order__legend">Доп</legend>
-            <textarea class="order__wishes" name="wishes" cols="23" rows="5" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            <textarea class="order__wishes" name="wishes" cols="23" rows="6" placeholder="Опишите все ваши пожелания к заказу"></textarea>
           </fieldset>
           <div class="order__footer-form">
             <p class="order__info">*Поля обязательные для заполнения</p>
@@ -114,7 +114,9 @@
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <a class="page-footer__logo"></a>
+        <div class="page-footer__logo-wrapper">
+          <a class="page-footer__logo"></a>
+        </div>
         <section class="social">
           <h2 class="visually-hidden">Наши страницы в соцсетях</h2>
           <ul class="social__list">
@@ -133,10 +135,11 @@
           <h2 class="visually-hidden">Разработчики сайта</h2>
           <p class="copyright__dev">
             Разработано
-            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" class="copyright__icon">Продвинутый HTML и CSS</a>
           </p>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>
         </section>
       </div>
     </footer>
+    <script src="js/mainNav.js"></script>
   </body>
 </html>
