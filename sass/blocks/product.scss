@@ -69,7 +69,8 @@
   }
 
   .product__photo-link {
-    height: 195px;
+    line-height: 0;
+    font-size: 0;
 
     &:hover + .product__wrapper {
       border: 1px solid $separator-color;
