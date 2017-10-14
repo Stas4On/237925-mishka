@@ -30,6 +30,9 @@
   .product-group__item {
     background-color: $prodgroup-color;
     width: 100%;
+    min-width: 320px;
+    max-width: 575px;
+    margin: 0 auto;
 
     &--lighter {
       background-color: $prodgroup-l-color;

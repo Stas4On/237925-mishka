@@ -1,6 +1,6 @@
 .page-footer {
   margin: 0 auto;
-
+  min-width: 320px;
   @include page-padding;
   background-color: $backcolor;
   padding-top: 20px;
