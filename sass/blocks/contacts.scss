@@ -123,29 +123,17 @@
     margin: 0 auto;
     line-height: 0;
     font-size: 0;
-    /* text-align: center;
-    width: 320px; */
+    text-align: center;
+    width: 320px;
     @media (min-width: $medium-width) {
-      width: auto;
-      height: 460px;
+      width: 768px;
+      // height: 460px;
       overflow: hidden;
     }
 
     @media (min-width: $large-width) {
       margin: 0;
       width: 50%;
-      height: 460px;
-    }
-    //временно
-    border: 1px solid black;
-  }
-
-  .contacts-img-map {
-    @media (min-width: $medium-width) {
-      height: 480px;
-    }
-
-    @media (min-width: $large-width) {
       height: 460px;
     }
   }

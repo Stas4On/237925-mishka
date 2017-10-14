@@ -9,10 +9,7 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 3;
-  }
-
-  .site-list__item {
-    width: 100vw;
+    min-width: 100%;
     background-color: $l-font-color;
   }
 
@@ -42,8 +39,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100vw;
-    background-color: $l-font-color;
 
     &--logo {
       position: relative;
@@ -103,7 +98,8 @@
       &--logo {
         order: 1;
         width: 280px;
-        padding-left: 60px;
+        padding-left: 30px;
+        padding-top: 10px;
       }
 
       &--form {
@@ -236,12 +232,23 @@
 
     @include size(86px, 36px);
 
-    &:hover {
+    &[href]:hover {
       opacity: 0.6;
     }
 
-    &:active {
+    &[href]:active {
       opacity: 0.3;
+    }
+
+    @media (min-width: $medium-width) {
+      background-image: url('../img/logo-tablet.svg');
+      @include size(112px, 46px);
+    }
+
+    @media (min-width: $large-width) {
+      background-image: url('../img/logo-desktop.svg');
+      @include size(148px, 72px);
+      padding: 0;
     }
   }
 

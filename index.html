@@ -73,7 +73,11 @@
               <td class="top-weeks__value">15 см</td>
             </tr>
           </table>
-          <img class="top-weeks__img" src="img/triple-set-mobile@1x.jpg" alt="Три потрясающих корзинки" width="260" height="315">
+          <picture>
+            <source media="(min-width: 1250px)"" srcset="img/triple-set-desktop@2x.jpg, img/triple-set-desktop@1x.jpg">
+            <source media="(min-width: 768px)" srcset="img/triple-set-tablet@2x.jpg, img/triple-set-tablet@1x.jpg">
+            <img class="top-weeks__img" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg" alt="Три потрясающих корзинки" width="260" height="315">
+          </picture>
           <span class="top-weeks__cost">Цена: 990 руб.</span>
           <a href="#" class="top-weeks__button button">Заказать</a>
         </div>
@@ -123,7 +127,11 @@
           </div>
         </div>
         <a href="#" class="contacts__map">
-          <img class="contacts-img-map" src="img/map-mobile@1x.jpg" alt="Наше расположение на карте" width="320" height="457">
+          <picture>
+            <source media="(min-width: 1250px)"" srcset="img/map-desktop@2x.jpg, img/map-desktop@1x.jpg">
+            <source media="(min-width: 768px)" srcset="img/map-tablet@2x.jpg, img/map-tablet@1x.jpg">
+            <img class="contacts-img-map" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg" alt="Наше расположение на карте">
+          </picture>
         </a>
         <div class="contacts__wrapper contacts__wrapper--center">
           <a href="#" class="contacts__write-us button">Напишите нам</a>

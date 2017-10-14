@@ -8,11 +8,16 @@
     padding-top: 80px;
     padding-bottom: 135px;
     background: url('../img/review@1x.jpg') no-repeat left top;
+
+    @media (min-resolution: 1.5dppx) {
+      background: url('../img/review@2x.jpg') no-repeat left top;
+      background-size: 350px 457px;
+    }
   }
 
   @media (min-width: $large-width) {
     @include page-padding-l;
-    background: url('../img/review@1x.jpg') no-repeat 100px top;
+    background-position: 100px top;
     padding-bottom: 190px;
   }
   .reviews__wrapper{

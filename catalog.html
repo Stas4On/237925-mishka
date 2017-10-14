@@ -45,7 +45,13 @@
         <h2 class="visually-hidden">Товары</h2>
         <div class="products__wrapper">
           <article class="products__item product">
-            <a href="#" class="product__photo-link"><img class="product__photo" src="img/photo-hare-mobile@1x.jpg" alt="Вязанный заяц" width="260" height="195"></a>
+            <a href="#" class="product__photo-link">
+              <picture>
+                <source media="(min-width: 1250px)"" srcset="img/photo-hare-desktop@2x.jpg 2x, img/photo-hare-desktop@1x.jpg 1x">
+                <source media="(min-width: 768px)" srcset="img/photo-hare-tablet@2x.jpg 2x, img/photo-hare-tablet@1x.jpg 1x">
+                <img class="product__photo" src="img/photo-hare-mobile@1x.jpg" srcset="img/photo-hare-mobile@2x.jpg 2x" alt="Вязанный заяц" width="260" height="195">
+              </picture>
+            </a>
             <div class="product__wrapper">
               <div class="product__title-wrap">
                 <h1 class="product__title"><a class="product__title-link" href="#">Зайчик-попрыгайчик</a></h1>
@@ -58,7 +64,13 @@
             </div>
           </article>
           <article class="products__item product">
-            <a href="#" class="product__photo-link"><img class="product__photo" src="img/photo-bowl-mobile@1x.jpg" alt="Вязанная корзинка бело-морковного цвета" width="260" height="195"></a>
+            <a href="#" class="product__photo-link">
+              <picture>
+                <source media="(min-width: 1250px)"" srcset="img/photo-bowl-desktop@2x.jpg 2x, img/photo-bowl-desktop@1x.jpg 1x">
+                <source media="(min-width: 768px)" srcset="img/photo-bowl-tablet@2x.jpg 2x, img/photo-bowl-tablet@1x.jpg 1x">
+                <img class="product__photo" src="img/photo-bowl-mobile@1x.jpg" srcset="img/photo-bowl-mobile@2x.jpg 2x" alt="Вязанная корзинка бело-морковного цвета" width="260" height="195">
+              </picture>
+            </a>
             <div class="product__wrapper">
               <div class="product__title-wrap">
                 <h1 class="product__title"><a class="product__title-link" href="#">Корзинка для белья</a></h1>
@@ -71,7 +83,13 @@
             </div>
           </article>
           <article class="products__item product">
-            <a href="#" class="product__photo-link"><img class="product__photo" src="img/photo-toys-mobile@1x.jpg" alt="Вместительная корзинка салатового цвета" width="260" height="195"></a>
+            <a href="#" class="product__photo-link">
+              <picture>
+                <source media="(min-width: 1250px)"" srcset="img/photo-toys-desktop@2x.jpg 2x, img/photo-toys-desktop@1x.jpg 1x">
+                <source media="(min-width: 768px)" srcset="img/photo-toys-tablet@2x.jpg 2x, img/photo-toys-tablet@1x.jpg 1x">
+                <img class="product__photo" src="img/photo-toys-mobile@1x.jpg" srcset="img/photo-toys-mobile@2x.jpg 2x" alt="Вместительная корзинка салатового цвета" width="260" height="195">
+              </picture>
+            </a>
             <div class="product__wrapper">
               <div class="product__title-wrap">
                 <h1 class="product__title"><a class="product__title-link" href="#">Большая корзинка для&nbsp;игрушек</a></h1>
@@ -90,7 +108,11 @@
           <div class="production__desktop-wrap">
             <h2 class="production__title">Процесс производства</h2>
             <a href="index.html" class="production__video">
-              <img class="production__image" src="img/video-mobile@1x.jpg" alt="Вязанная корзинка">
+              <picture>
+                <source media="(min-width: 1250px)"" srcset="img/video-desktop@2x.jpg 2x, img/video-desktop@1x.jpg 1x">
+                <source media="(min-width: 768px)" srcset="img/video-tablet@2x.jpg 2x, img/video-tablet@1x.jpg 1x">
+                <img class="production__image" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Вязанная корзинка">
+              </picture>
             </a>
             <p class="production__video-description">
               По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
