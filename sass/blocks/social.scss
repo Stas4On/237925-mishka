@@ -14,17 +14,27 @@
   }
 
   .social__item {
+    position: relative;
     display: inline-block;
     vertical-align: middle;
     font-size: 0;
     margin-right: 15px;
 
-    @include size (40px, 40px);
-    //временно
-    border: 1px solid black;
+    // @include size (40px, 40px);
 
     &:nth-child(3n) {
       margin-right: 0;
+    }
+  }
+
+  .social__link {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    @include size (40px, 30px);
+
+    &hover .social__icon {
+      fill: $social-color;
     }
   }
 }

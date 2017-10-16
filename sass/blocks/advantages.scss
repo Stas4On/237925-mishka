@@ -47,6 +47,7 @@
   }
 
   .advantages__item {
+    position: relative;
     box-sizing: content-box;
     width: 260px;
     font-size: 17px;
@@ -91,6 +92,32 @@
 
     @media (min-width: $large-width) {
       padding-right: 50px;
+    }
+  }
+
+  .advantages__icon {
+    position: absolute;
+    fill: $l-aquamarine;
+    top: 6px;
+    left: 4px;
+
+    &--flower {
+      top: 3px;
+      left: 7px;
+    }
+
+    &--money {
+      left: 0;
+    }
+
+    &--rocket {
+      top: 10px;
+      left: -6px;
+    }
+
+    &--heart {
+      top: 12px;
+      left: 8px;
     }
   }
 }

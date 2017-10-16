@@ -124,11 +124,39 @@
 
   .order__type {
     display: block;
+    position: relative;
 
     @include text-item-form;
     padding-left: 65px;
     padding-top: 10px;
     padding-bottom: 15px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 0;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      border: 9px solid $l-font-color;
+      box-shadow: 0 0 0 2px $sfont-color;
+
+      @media (min-width: $medium-width) {
+        width: 52px;
+        height: 52px;
+        border: 14px solid $l-font-color;
+        top: 0;
+      }
+    }
+
+    &:hover::before {
+      box-shadow: 0 0 0 2px $prodgroup-l-color;
+    }
+
+    &:active::before {
+      box-shadow: 0 0 0 2px rgba($mfont-color, 0.3);
+    }
 
     @media (min-width: $medium-width) {
       padding-left: 80px;
@@ -153,6 +181,14 @@
     padding-bottom: 15px;
     border-bottom: 2px solid $sfont-color;
     margin-bottom: 15px;
+
+    &:hover {
+      border-color: $prodgroup-l-color;
+    }
+
+    &:focus {
+      border-color: $prodgroup-l-color;
+    }
 
     @media (min-width: $medium-width) {
       width: 370px;
@@ -185,6 +221,14 @@
     border-bottom: 2px solid $sfont-color;
     margin-bottom: 10px;
 
+    &:hover {
+      border-color: $prodgroup-l-color;
+    }
+
+    &:focus {
+      border-color: $prodgroup-l-color;
+    }
+
     @media (min-width: $medium-width) {
       padding-left: 15px;
       padding-bottom: 12px;
@@ -202,6 +246,14 @@
     border-bottom: 1px solid $sfont-color;
     margin-bottom: 10px;
 
+    &:hover {
+      border-color: $prodgroup-l-color;
+    }
+
+    &:focus {
+      border-color: $prodgroup-l-color;
+    }
+
     @media (min-width: $medium-width) {
       padding-left: 15px;
       padding-bottom: 12px;
@@ -213,11 +265,37 @@
 
   .order__color-checkbox {
     display: block;
+    position: relative;
 
     @include text-item-form;
     padding-left: 65px;
     padding-top: 23px;
     padding-bottom: 20px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 0;
+      width: 40px;
+      height: 39px;
+      border: 2px solid $mfont-color;
+
+      @media (min-width: $medium-width) {
+        width: 54px;
+        height: 52px;
+        top: 0;
+      }
+    }
+
+    &:hover::before {
+      border-color: $prodgroup-l-color;
+    }
+
+    &:active::before {
+      border-color: rgba($mfont-color, 0.3);
+
+    }
 
     @media (min-width: $medium-width) {
       width: 230px;
@@ -246,6 +324,14 @@
     @include indent-reset;
     padding: 15px;
     border: 2px solid $sfont-color;
+
+    &:hover {
+      border-color: $prodgroup-l-color;
+    }
+
+    &:focus {
+      border-color: $prodgroup-l-color;
+    }
   }
 
   .order__footer-form {
