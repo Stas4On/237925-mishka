@@ -1,35 +1,63 @@
 .top-weeks {
     @include page-padding;
     padding-top: 25px;
-    padding-bottom: 35px;
+
 
     @media (min-width: $medium-width) {
       @include page-padding-m;
-      padding-top: 15px;
-      padding-bottom: 70px;
+      padding-top: 35px;
+
     }
 
     @media (min-width: $large-width) {
       @include page-padding-l;
-      padding-top: 100px;
-      padding-bottom: 100px;
+      padding-top: 110px;
+
     }
 
   .top-weeks__wrapper {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 260px;
     margin: 0 auto;
+    padding-bottom: 35px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 23px;
+      background: url('../../img/bg-zigzag-line.svg') repeat-x bottom;
+      background-size: auto 5px;
+    }
 
     @media (min-width: $medium-width) {
       position: relative;
       width: 668px;
+      padding-bottom: 70px;
+
+      &:after {
+        bottom: 5px;
+        width: 100%;
+        height: 23px;
+        background-size: auto 15px;
+      }
     }
 
     @media (min-width: $large-width) {
       width: 1050px;
       padding-left: 175px;
+      padding-bottom: 100px;
+
+      &:after {
+        width: 100%;
+        height: 23px;
+        background-size: auto 21px;
+      }
     }
   }
 
@@ -114,15 +142,14 @@
 
   .top-weeks__img {
     margin-top: 30px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 
     @media (min-width: $medium-width) {
-      //временно
       margin: 0;
       width: 334px;
       height: 404px;
       position: absolute;
-      bottom: 0;
+      bottom: 100px;
       right: 0;
       z-index: -1;
     }

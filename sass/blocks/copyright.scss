@@ -9,22 +9,27 @@
     margin: 0;
   }
 
-  .copyright__dev {
-    @include indent-reset;
+  .copyright__icon {
+    fill: $prodgroup-l-color;
+  }
 
+  .copyright__link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-size: 19px;
     line-height: 18px;
     font-weight: bold;
     color: $sfont-color;
-  }
 
-  .copyright__link {
-    display: inline-block;
-    vertical-align: middle;
-    font-size: 0;
+    @include size(185px, 35px);
 
-    @include size(30px, 40px);
-    //временно
-    border: 1px solid black;
+    &:hover > .copyright__icon {
+      fill: $social-color;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }

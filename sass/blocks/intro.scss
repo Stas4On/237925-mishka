@@ -1,4 +1,5 @@
 .intro {
+  position: relative;
   background-color: $backcolor;
   display: flex;
   flex-direction: column;
@@ -6,12 +7,37 @@
   min-width: 320px;
 
   @media (min-width: $medium-width) {
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 34px;
+      background: url('../../img/bg-zigzag-fill.svg') repeat-x bottom;
+      background-size: auto 23px;
+
+      @media (min-width: $large-width) {
+        background-size: auto 34px;
+      }
+    }
+  }
+  @media (min-width: $medium-width) {
     margin-top: -60px;
   }
 
   &--home {
     min-height: 280px;
     background: url('../img/hero-mobile@1x.jpg') no-repeat center -20px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-color: $background-image;
+    }
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background: url('../img/hero-mobile@2x.jpg') no-repeat center -20px;
@@ -21,6 +47,9 @@
     @media (min-width: $medium-width) {
       background: url('../img/hero-tablet@1x.jpg') no-repeat center top;
       min-height: 630px;
+      &::before {
+        display: none;
+      }
 
       @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
         background: url('../img/hero-tablet@2x.jpg') no-repeat center top;
@@ -51,7 +80,7 @@
     @media (min-width: $medium-width) {
       width: 540px;
       padding-top: 95px;
-      padding-bottom: 80px;
+      padding-bottom: 90px;
 
       &--home{
         padding-top: 155px;
@@ -60,7 +89,7 @@
 
     @media (min-width: $large-width) {
       width: 700px;
-      padding-bottom: 100px;
+      padding-bottom: 120px;
     }
   }
 }

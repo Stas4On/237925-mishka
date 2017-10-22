@@ -18,6 +18,14 @@
       background: url('../img/icon-right-arrow.svg') no-repeat center;
     }
 
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
     @media (min-width: $medium-width) {
       border: none;
       margin: 0;
