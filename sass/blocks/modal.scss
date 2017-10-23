@@ -1,3 +1,56 @@
 .modal {
-  display: none;
+  @include page-padding;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  position: fixed;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 320px;
+  min-height: 335px;
+  box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+  border: 1px solid $border-popup;
+  background: $bg-popup;
+
+  @media (min-width: $medium-width) {
+    width: 567px;
+  }
+
+  &--close {
+    display: none;
+  }
+
+  .modal__wrapper {
+    width: 260px;
+    margin: 0 auto;
+
+    @media (min-width: $medium-width) {
+      width: 355px;
+    }
+  }
+
+  .modal__title {
+    @include style-h2;
+    text-transform: uppercase;
+    text-align: center;
+
+    @media (min-width: $medium-width) {
+    font-size: 30px;
+    line-height: 57px;
+    }
+    @media (min-width: $large-width) {
+      font-size: 30px;
+      line-height: 57px;
+    }
+  }
+
+  .modal__info {
+    font-size: 15px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  @media (min-width: $medium-width) {
+    font-size: 17px;
+  }
 }

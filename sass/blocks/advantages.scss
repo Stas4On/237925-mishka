@@ -47,6 +47,7 @@
   }
 
   .advantages__item {
+    position: relative;
     box-sizing: content-box;
     width: 260px;
     font-size: 17px;
@@ -56,6 +57,45 @@
     padding-top: 60px;
     padding-bottom: 24px;
 
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -10px;
+      width: 60px;
+      height: 45px;
+      background: url('../img/feature-flower.svg') no-repeat 15px;
+    }
+
+    &--money {
+      &:before {
+        background: url('../img/feature-money.svg') no-repeat 10px 5px;
+      }
+    }
+
+    &--heart {
+      &:before {
+        background: url('../img/feature-heart.svg') no-repeat 15px;
+      }
+    }
+
+    &--ball {
+      &:before {
+        background: url('../img/feature-ball.svg') no-repeat center;
+      }
+    }
+
+    &--rocket {
+      &:before {
+        background: url('../img/feature-rocket.svg') no-repeat center;
+      }
+    }
+
+    &--gift {
+      &:before {
+        background: url('../img/feature-gift.svg') no-repeat center;
+      }
+    }
 
     @media (min-width: $medium-width) {
       font-size: 20px;

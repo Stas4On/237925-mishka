@@ -9,10 +9,7 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 3;
-  }
-
-  .site-list__item {
-    width: 100vw;
+    min-width: 100%;
     background-color: $l-font-color;
   }
 
@@ -101,7 +98,8 @@
       &--logo {
         order: 1;
         width: 280px;
-        padding-left: 60px;
+        padding-left: 30px;
+        padding-top: 10px;
       }
 
       &--form {
@@ -144,6 +142,19 @@
     padding-left: 45px;
     color: $sfont-color;
 
+    &--search,
+    &--cart {
+      position: relative;
+
+      svg {
+        position: absolute;
+        left: 2px;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 0.2;
+      }
+    }
+
     &--hidden {
       font-size: 15px;
       line-height: 24px;
@@ -163,6 +174,17 @@
       color: rgba(0, 0, 0, 0.3);
     }
 
+    &--search:hover > svg,
+    &--cart:hover > svg {
+      opacity: 1;
+      fill: $icon-color;
+    }
+
+    &--search:active > svg,
+    &--cart:active > svg {
+      opacity: 0.3;
+    }
+
     @media (min-width: $medium-width) {
       width: 100%;
 
@@ -173,13 +195,19 @@
         width: 83px;
         font-size: 0;
         padding-left: 0;
-        background: url("../img/icon-search.svg") no-repeat center;
-        opacity: 0.2;
       }
 
       &--cart {
         padding-left: 85px;
       }
+
+      &--search,
+      &--cart {
+        svg {
+          left: 33px;
+        }
+      }
+
 
       &--weight,
       &--new,
@@ -234,12 +262,23 @@
 
     @include size(86px, 36px);
 
-    &:hover {
+    &[href]:hover {
       opacity: 0.6;
     }
 
-    &:active {
+    &[href]:active {
       opacity: 0.3;
+    }
+
+    @media (min-width: $medium-width) {
+      background-image: url('../img/logo-tablet.svg');
+      @include size(112px, 46px);
+    }
+
+    @media (min-width: $large-width) {
+      background-image: url('../img/logo-desktop.svg');
+      @include size(148px, 72px);
+      padding: 0;
     }
   }
 
@@ -248,19 +287,19 @@
     top: 50%;
     right: 30px;
     transform: translateY(-11px);
-    background: url('../img/icon-menu-open.svg') no-repeat center;
 
     @include size(22px, 22px);
 
     @include btn-reset;
     font-size: 0;
 
-    &--opened {
-      background: url('../img/icon-menu-close.svg') no-repeat center;
-    }
-
     @media (min-width: $medium-width) {
       display: none;
     }
+  }
+
+  .site-list__open--hidden,
+  .site-list__close--hidden {
+    display: none;
   }
 }

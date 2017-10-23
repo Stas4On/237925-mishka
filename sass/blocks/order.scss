@@ -1,29 +1,37 @@
 .order {
-
-  @include page-padding;
   padding-top: 25px;
   padding-bottom: 55px;
 
   @media (min-width: $medium-width) {
-    @include page-padding-m;
-    padding-top: 75px;
+    padding-top: 60px;
   }
 
   @media (min-width: $large-width) {
-      padding-top: 125px;
+      padding-top: 105px;
       padding-bottom: 50px;
     }
 
   .order__wrapper {
-    width: 260px;
-    margin: 0 auto;
+    @include page-padding;
 
     @media (min-width: $medium-width) {
-      width: 668px;
+      @include page-padding-m;
+      padding-top: 50px;
+      padding-bottom: 30px;
+
+      &--bg-grey {
+        background-color: $backcolor;
+      }
     }
 
     @media (min-width: $large-width) {
-      width: 1050px;
+      &--bg-grey {
+        padding-top: 45px;
+      }
+
+      &:last-child {
+        padding-top: 60px;
+      }
     }
   }
 
@@ -31,50 +39,69 @@
     @include indent-reset
     font-size: 13px;
     line-height: 24px;
+    width: 260px;
+    margin: 0 auto;
 
     @media (min-width: $medium-width) {
       font-size: 17px;
       line-height: 30px;
-      margin-bottom: 55px;
+      width: 668px;
     }
 
     @media (min-width: $large-width) {
       padding-left: 175px;
       padding-right: 175px;
+      width: 1050px;
     }
   }
 
   .order__block-form {
     @include indent-reset;
+    margin: 0 auto;
     margin-top: 25px;
     border: none;
+    width: 260px;
+
+    &--icon {
+      position: relative;
+    }
 
     @media (min-width: $medium-width) {
       margin-top: 0;
-      margin-bottom: 70px;
       padding-left: 167px;
       position: relative;
+      width: 668px;
 
       &--indent {
-        margin-top: 85px;
         margin-bottom: 20px;
         }
-
-      &:last-of-type {
-        margin-bottom: 45px;
-        margin-top: 90px;
-      }
     }
 
     @media (min-width: $large-width) {
       padding-left: 175px;
-      &:nth-of-type(n+3) {
-        padding-right: 175px;
-      }
+      padding-right: 175px;
+      width: 1050px;
 
-      &:last-of-type {
-        margin-bottom: 40px;
+      &--right-indent {
+        padding-right: 0;
       }
+    }
+  }
+
+  .order__phone-icon,
+  .order__email-icon {
+    position: absolute;
+    opacity: 0.2;
+    top: 30px;
+    right: 5px;
+
+    @media (min-width: $medium-width) {
+      top: 15px;
+      right: 0;
+    }
+
+    @media (min-width: $large-width) {
+      right: 175px;
     }
   }
 
@@ -124,11 +151,39 @@
 
   .order__type {
     display: block;
+    position: relative;
 
     @include text-item-form;
     padding-left: 65px;
     padding-top: 10px;
     padding-bottom: 15px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 0;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      border: 9px solid $l-font-color;
+      box-shadow: 0 0 0 2px $sfont-color;
+
+      @media (min-width: $medium-width) {
+        width: 50px;
+        height: 50px;
+        border: 15px solid $l-font-color;
+        top: 0;
+      }
+    }
+
+    &:hover::before {
+      box-shadow: 0 0 0 2px $prodgroup-l-color;
+    }
+
+    &:active::before {
+      box-shadow: 0 0 0 2px rgba($mfont-color, 0.3);
+    }
 
     @media (min-width: $medium-width) {
       padding-left: 80px;
@@ -136,6 +191,10 @@
       padding-top: 15px;
       padding-bottom: 20px;
     }
+  }
+
+  .order__input-radio:checked + .order__type:before {
+    background-color: $prodgroup-l-color;
   }
 
   .order__name {
@@ -153,6 +212,34 @@
     padding-bottom: 15px;
     border-bottom: 2px solid $sfont-color;
     margin-bottom: 15px;
+
+    &:hover {
+      border-color: $prodgroup-l-color;
+    }
+
+    &:focus {
+      border-color: $prodgroup-l-color;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $mfont-color;
+      opacity: 0.3;
+    }
+
+    &::-moz-placeholder {
+      color: $mfont-color;
+      opacity: 0.3;
+    }
+
+    &:-ms-input-placeholder {
+      color: $mfont-color;
+      opacity: 0.3;
+    }
+
+    &:-moz-placeholder {
+      color: $mfont-color;
+      opacity: 0.3;
+    }
 
     @media (min-width: $medium-width) {
       width: 370px;
@@ -182,16 +269,57 @@
     width: 100%;
     padding-top: 15px;
     padding-bottom: 15px;
+    padding-right: 45px;
     border-bottom: 2px solid $sfont-color;
     margin-bottom: 10px;
+
+    &:hover {
+      border-color: $prodgroup-l-color;
+    }
+
+    &:focus {
+      border-color: $prodgroup-l-color;
+    }
+
+    &:hover + svg {
+      fill: $prodgroup-l-color;
+      opacity: 1;
+    }
+
+    &:focus + svg {
+      fill: $prodgroup-l-color;
+      opacity: 1;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $mfont-color;
+      opacity: 0.3;
+    }
+
+    &::-moz-placeholder {
+      color: $mfont-color;
+      opacity: 0.3;
+    }
+
+    &:-ms-input-placeholder {
+      color: $mfont-color;
+      opacity: 0.3;
+    }
+
+    &:-moz-placeholder {
+      color: $mfont-color;
+      opacity: 0.3;
+    }
 
     @media (min-width: $medium-width) {
       padding-left: 15px;
       padding-bottom: 12px;
+      background-color: $backcolor;
     }
   }
 
   .order__input-tel {
+    position: relative;
     @include text-item-form;
     font-weight: normal;
     border: none;
@@ -199,8 +327,47 @@
     width: 100%;
     padding-top: 15px;
     padding-bottom: 15px;
+    padding-right: 45px;
     border-bottom: 1px solid $sfont-color;
     margin-bottom: 10px;
+
+    &:hover {
+      border-color: $prodgroup-l-color;
+    }
+
+    &:focus {
+      border-color: $prodgroup-l-color;
+    }
+
+    &:hover + svg {
+      fill: $prodgroup-l-color;
+      opacity: 1;
+    }
+
+    &:focus + svg {
+      fill: $prodgroup-l-color;
+      opacity: 1;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $mfont-color;
+      opacity: 0.3;
+    }
+
+    &::-moz-placeholder {
+      color: $mfont-color;
+      opacity: 0.3;
+    }
+
+    &:-ms-input-placeholder {
+      color: $mfont-color;
+      opacity: 0.3;
+    }
+
+    &:-moz-placeholder {
+      color: $mfont-color;
+      opacity: 0.3;
+    }
 
     @media (min-width: $medium-width) {
       padding-left: 15px;
@@ -208,16 +375,43 @@
       border-bottom: 2px solid $sfont-color;
       font-size: 19px;
       margin-bottom: 0;
+      background-color: $backcolor;
     }
   }
 
   .order__color-checkbox {
     display: block;
+    position: relative;
 
     @include text-item-form;
     padding-left: 65px;
     padding-top: 23px;
     padding-bottom: 20px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 0;
+      width: 40px;
+      height: 39px;
+      border: 2px solid $mfont-color;
+
+      @media (min-width: $medium-width) {
+        width: 54px;
+        height: 52px;
+        top: 5px;
+      }
+    }
+
+    &:hover::before {
+      border-color: $prodgroup-l-color;
+    }
+
+    &:active::before {
+      border-color: rgba($mfont-color, 0.3);
+
+    }
 
     @media (min-width: $medium-width) {
       width: 230px;
@@ -227,7 +421,7 @@
       padding-top: 20px;
       padding-bottom: 23px;
 
-      &:nth-child(even) {
+      &:nth-of-type(odd) {
         margin-right: 30px;
       }
     }
@@ -236,6 +430,15 @@
       margin-right: 30px;
     }
   }
+
+   .order__input-checkbox:checked + .order__color-checkbox:before {
+      background: url('../../img/icon-tick.svg') no-repeat center;
+      background-size: 22px 16px;
+
+      @media (min-width: $medium-width) {
+        background-size: auto;
+      }
+   }
 
   .order__wishes {
     @include text-item-form;
@@ -246,19 +449,53 @@
     @include indent-reset;
     padding: 15px;
     border: 2px solid $sfont-color;
+
+    &:hover {
+      border-color: $prodgroup-l-color;
+    }
+
+    &:focus {
+      border-color: $prodgroup-l-color;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $mfont-color;
+      opacity: 0.3;
+    }
+
+    &::-moz-placeholder {
+      color: $mfont-color;
+      opacity: 0.3;
+    }
+
+    &:-ms-input-placeholder {
+      color: $mfont-color;
+      opacity: 0.3;
+    }
+
+    &:-moz-placeholder {
+      color: $mfont-color;
+      opacity: 0.3;
+    }
   }
 
   .order__footer-form {
+    margin: 0 auto;
+    width: 260px;
+
     @media (min-width: $medium-width) {
       display: flex;
       flex-direction: row-reverse;
       justify-content: space-between;
       align-items: center;
+      width: 668px;
+      margin-top: 20px;
     }
 
     @media (min-width: $large-width) {
       padding-left: 175px;
       padding-right: 175px;
+      width: 1050px;
     }
   }
 

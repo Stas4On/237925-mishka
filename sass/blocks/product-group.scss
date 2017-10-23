@@ -1,17 +1,40 @@
 .product-group {
+  position: relative;
+  background-color: $background-image;
 
   @media (min-width: $medium-width) {
     @include page-padding-m;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 23px;
+      background: url('../../img/bg-zigzag-fill.svg') repeat-x bottom;
+      background-size: auto 23px;
+    }
   }
 
   @media (min-width: $large-width) {
       @include page-padding-l;
+      padding-bottom: 20px;
+
+      &:before {
+        height: 37px;
+        background-size: auto 37px;
+      }
     }
 
   .product-group__wrapper {
     text-align: center;
+
+    @media (min-width: $large-width) {
+      max-width: 1150px;
+      margin: 0 auto;
+    }
   }
 
   .product-group__list{
@@ -26,6 +49,9 @@
   .product-group__item {
     background-color: $prodgroup-color;
     width: 100%;
+    min-width: 320px;
+    max-width: 575px;
+    margin: 0 auto;
 
     &--lighter {
       background-color: $prodgroup-l-color;
@@ -62,11 +88,25 @@
       right: 25px;
       width: 62px;
       height: 62px;
-      background: url('../img/icon-interior.svg') no-repeat center;
+      background: url('../img/interior.svg') no-repeat center;
     }
 
     &--toys::after{
-      background: url('../img/icon-toy.svg') no-repeat center;
+      background: url('../img/toy.svg') no-repeat center;
+    }
+
+    &:hover {
+      &::after{
+        opacity: 0.7;
+      }
+    }
+
+    &:active {
+      color: rgba($l-font-color, 0.3);
+
+      &::after{
+        opacity: 0.3;
+      }
     }
   }
 }

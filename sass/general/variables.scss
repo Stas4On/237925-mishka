@@ -8,13 +8,19 @@ $sfont-color: #000000;
 ///цвет фона блоков
 $backcolor: #f1f1f1;
 
+$background-image: #f8f8f8;
+
 $l-aquamarine: #63d1bb;
 
 $aquamarine: #56c3b2;
 
+$social-color: #46c1ae;
+
 $prodgroup-color: $aquamarine;
 
 $prodgroup-l-color: $l-aquamarine;
+
+$icon-color: $l-aquamarine;
 
 $l-font-color: #ffffff;
 
@@ -27,3 +33,7 @@ $medium-width: 768px;
 $medium-width-only: 1249px;
 
 $large-width: 1250px;
+
+$border-popup: #c6c6c6;
+
+$bg-popup: $l-font-color;

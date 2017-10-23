@@ -1,6 +1,6 @@
 .page-footer {
   margin: 0 auto;
-
+  min-width: 320px;
   @include page-padding;
   background-color: $backcolor;
   padding-top: 20px;
@@ -38,17 +38,27 @@
   .page-footer__logo {
     display: block;
     box-sizing: content-box;
-    background: url('../img/logo-mobile.svg') no-repeat center;
     text-align: left;
 
     @include size(86px, 36px);
 
-    &:hover {
-      opacity: 0.6;
+    &:hover > .page-footer__logo-icon {
+      fill: $social-color;
     }
 
-    &:active {
+    &:active > .page-footer__logo-icon {
+      fill: $social-color;
       opacity: 0.3;
+    }
+
+    @media (min-width: $medium-width) {
+
+    }
+  }
+
+  .page-footer__logo-icon{
+    @media (min-width: $medium-width) {
+      width: 100px;
     }
   }
 }
