@@ -3,15 +3,15 @@
   margin: 0 auto;
 
   @media (max-width: $mobile-width-only) {
-  &--opened {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 3;
-    min-width: 100%;
-    background-color: $l-font-color;
-  }
+    &--opened {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+      min-width: 100%;
+      background-color: $l-font-color;
+    }
 
     &--closed .site-list__item:nth-child(n+2) {
       display: none;
@@ -233,8 +233,8 @@
       @media (max-width: $medium-width-only) {
         &--catalog,
         &--form,{
-        @include under-header;
-        font-size: 15px;
+          @include under-header;
+          font-size: 15px;
         }
       }
     }

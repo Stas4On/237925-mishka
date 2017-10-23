@@ -81,9 +81,7 @@
   }
   .intro__title {
     @include indent-reset;
-
     @include page-padding;
-
     @include style-h2;
 
     font-size: 27px;

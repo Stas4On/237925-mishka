@@ -1,15 +1,15 @@
 .production {
-  padding-bottom: 60px;
-
   @include page-padding;
 
+  padding-bottom: 60px;
+
   @media (min-width: $medium-width) {
+    @include page-padding-m;
+
     position: relative;
 
     padding-top: 475px;
     padding-bottom: 65px;
-
-    @include page-padding-m;
   }
 
   @media (min-width: $large-width) {
@@ -67,13 +67,13 @@
   }
 
   .production__title {
+    @include title-medium;
+
     margin-bottom: 25px;
     padding-top: 30px;
     padding-left: 90px;
 
     background: url("../img/video.svg") no-repeat 35px 35px;
-
-    @include title-medium;
 
     @media (min-width: $medium-width) {
       font-size: 20px;
@@ -96,6 +96,8 @@
   }
 
   .production__video-description {
+    @include indent-reset;
+
     font-size: 13px;
     line-height: 24px;
 
@@ -103,8 +105,6 @@
     padding-right: 35px;
     padding-bottom: 20px;
     padding-left: 35px;
-
-    @include indent-reset;
 
     @media (min-width: $medium-width) and (max-width: $medium-width-only) {
       font-size: 15px;
@@ -120,8 +120,8 @@
       line-height: 30px;
 
       padding-right: 0;
-      padding-bottom: 45px;;
-      padding-left: 0;
+      padding-bottom: 45px;
+      padding-left: 0;;
     }
   }
 

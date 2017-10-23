@@ -1,4 +1,6 @@
 .modal {
+  @include page-padding;
+
   position: fixed;
   top: 35%;
   left: 50%;
@@ -13,8 +15,6 @@
   border: 1px solid $border-popup;
   background: $bg-popup;
   box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
-
-  @include page-padding;
 
   @media (min-width: $medium-width) {
     width: 567px;
@@ -34,10 +34,10 @@
   }
 
   .modal__title {
+    @include style-h2;
+
     text-align: center;
     text-transform: uppercase;
-
-    @include style-h2;
 
     @media (min-width: $medium-width) {
       font-size: 30px;

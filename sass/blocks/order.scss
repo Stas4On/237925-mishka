@@ -15,10 +15,10 @@
     @include page-padding;
 
     @media (min-width: $medium-width) {
+      @include page-padding-m;
+
       padding-top: 50px;
       padding-bottom: 30px;
-
-      @include page-padding-m;
 
       &--bg-grey {
         background-color: $backcolor;
@@ -37,13 +37,13 @@
   }
 
   .order__preface {
+    @include indent-reset;
+
     font-size: 13px;
     line-height: 24px;
 
     width: 260px;
     margin: 0 auto;
-
-    @include indent-reset
 
     @media (min-width: $medium-width) {
       font-size: 17px;
@@ -60,13 +60,13 @@
   }
 
   .order__block-form {
+    @include indent-reset;
+
     width: 260px;
     margin: 0 auto;
     margin-top: 25px;
 
     border: none;
-
-    @include indent-reset;
 
     &--icon {
       position: relative;
@@ -166,6 +166,8 @@
   }
 
   .order__type {
+    @include text-item-form;
+
     position: relative;
 
     display: block;
@@ -173,8 +175,6 @@
     padding-top: 10px;
     padding-bottom: 15px;
     padding-left: 65px;
-
-    @include text-item-form;
 
     &::before {
       position: absolute;
@@ -230,6 +230,8 @@
   }
 
   .order__color-checkbox {
+    @include text-item-form;
+
     position: relative;
 
     display: block;
@@ -237,8 +239,6 @@
     padding-top: 23px;
     padding-bottom: 20px;
     padding-left: 65px;
-
-    @include text-item-form;
 
     &::before {
       position: absolute;
@@ -322,12 +322,14 @@
   }
 
   .order__name {
-    padding-right: 25px;
-
     @include text-item-form;
+
+    padding-right: 25px;
   }
 
   .order__input-name {
+    @include text-item-form;
+
     font-weight: normal;
 
     width: 100%;
@@ -338,8 +340,6 @@
     border: none;
     border-bottom: 2px solid $sfont-color;
     outline: none;
-
-    @include text-item-form;
 
     &:hover {
       border-color: $prodgroup-l-color;
@@ -390,6 +390,8 @@
   }
 
   .order__input-email {
+    @include text-item-form;
+
     font-weight: normal;
 
     width: 100%;
@@ -401,8 +403,6 @@
     border: none;
     border-bottom: 2px solid $sfont-color;
     outline: none;
-
-    @include text-item-form;
 
     &:hover {
       border-color: $prodgroup-l-color;
@@ -453,6 +453,8 @@
   }
 
   .order__input-tel {
+    @include text-item-form;
+
     font-weight: normal;
 
     position: relative;
@@ -466,8 +468,6 @@
     border: none;
     border-bottom: 1px solid $sfont-color;
     outline: none;
-
-    @include text-item-form;
 
     &:hover {
       border-color: $prodgroup-l-color;
@@ -522,6 +522,9 @@
   }
 
   .order__wishes {
+    @include text-item-form;
+    @include indent-reset;
+
     font-weight: normal;
 
     width: 100%;
@@ -529,10 +532,6 @@
 
     border: 2px solid $sfont-color;
     outline: none;
-
-    @include text-item-form;
-
-    @include indent-reset;
 
     &:hover {
       border-color: $prodgroup-l-color;
