@@ -8,7 +8,7 @@
 
     padding-bottom: 10px;
 
-    &:before {
+    &::before {
       position: absolute;
       bottom: 0;
       left: 0;
@@ -18,7 +18,7 @@
 
       content: "";
 
-      background: url("../../img/bg-zigzag-fill.svg") repeat-x bottom;
+      background: url("../img/bg-zigzag-fill.svg") repeat-x bottom;
       background-size: auto 23px;
     }
   }
@@ -28,7 +28,7 @@
 
     padding-bottom: 20px;
 
-    &:before {
+    &::before {
       height: 37px;
 
       background-size: auto 37px;

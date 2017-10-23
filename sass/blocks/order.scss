@@ -217,15 +217,15 @@
     }
   }
 
-  .order__input-radio:checked + .order__type:before {
+  .order__input-radio:checked + .order__type::before {
     background-color: $prodgroup-l-color;
   }
 
-  .order__input-radio:checked:active + .order__type:before {
+  .order__input-radio:checked:active + .order__type::before {
     background-color: $l-font-color;
   }
 
-  .order__input-radio:focus + .order__type:before {
+  .order__input-radio:focus + .order__type::before {
     box-shadow: 0 0 0 2px $prodgroup-l-color;
   }
 
@@ -288,7 +288,7 @@
     }
   }
 
-  .order__input-checkbox:checked + .order__color-checkbox:before {
+  .order__input-checkbox:checked + .order__color-checkbox::before {
     background: url("../../img/icon-tick.svg") no-repeat center;
     background-size: 22px 16px;
 
@@ -297,11 +297,11 @@
     }
   }
 
-  .order__input-checkbox:checked:active + .order__color-checkbox:before {
+  .order__input-checkbox:checked:active + .order__color-checkbox::before {
     background: none;
   }
 
-  .order__input-checkbox:disabled + .order__color-checkbox:before {
+  .order__input-checkbox:disabled + .order__color-checkbox::before {
     opacity: 0.5;
   }
 
@@ -317,7 +317,7 @@
     background: url("../../img/icon-tick.svg") no-repeat center;
   }
 
-  .order__input-checkbox:focus + .order__color-checkbox:before {
+  .order__input-checkbox:focus + .order__color-checkbox::before {
     border-color: $prodgroup-l-color;
   }
 

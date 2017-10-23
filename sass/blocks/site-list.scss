@@ -232,12 +232,13 @@
 
       @media (max-width: $medium-width-only) {
         &--catalog,
-        &--form,{
+        &--form {
           @include under-header;
           font-size: 15px;
         }
       }
     }
+
     @media (min-width: $large-width) {
       &--form {
         padding-left: 35px;
@@ -258,7 +259,7 @@
     box-sizing: content-box;
     padding-top: 22px;
     padding-bottom: 21px;
-    background: url('../img/logo-mobile.svg') no-repeat center;
+    background: url("../img/logo-mobile.svg") no-repeat center;
 
     @include size(86px, 36px);
 
@@ -271,12 +272,14 @@
     }
 
     @media (min-width: $medium-width) {
-      background-image: url('../img/logo-tablet.svg');
+      background-image: url("../img/logo-tablet.svg");
+
       @include size(112px, 46px);
     }
 
     @media (min-width: $large-width) {
-      background-image: url('../img/logo-desktop.svg');
+      background-image: url("../img/logo-desktop.svg");
+
       @include size(148px, 72px);
       padding: 0;
     }

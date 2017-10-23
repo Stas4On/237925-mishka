@@ -65,7 +65,7 @@
 
     color: $sfont-color;
 
-    &:before {
+    &::before {
       position: absolute;
       top: 0;
       left: -10px;
@@ -79,31 +79,31 @@
     }
 
     &--money {
-      &:before {
+      &::before {
         background: url("../img/feature-money.svg") no-repeat 10px 5px;
       }
     }
 
     &--heart {
-      &:before {
+      &::before {
         background: url("../img/feature-heart.svg") no-repeat 15px;
       }
     }
 
     &--ball {
-      &:before {
+      &::before {
         background: url("../img/feature-ball.svg") no-repeat center;
       }
     }
 
     &--rocket {
-      &:before {
+      &::before {
         background: url("../img/feature-rocket.svg") no-repeat center;
       }
     }
 
     &--gift {
-      &:before {
+      &::before {
         background: url("../img/feature-gift.svg") no-repeat center;
       }
     }
