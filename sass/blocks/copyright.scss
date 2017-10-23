@@ -1,9 +1,11 @@
 .copyright {
-  width: 185px;
   display: flex;
+
+  width: 185px;
+  margin: 0 auto;
+
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
 
   @media (min-width: $medium-width) {
     margin: 0;
@@ -14,15 +16,18 @@
   }
 
   .copyright__link {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include size(185px, 35px);
+
     font-size: 19px;
-    line-height: 18px;
     font-weight: bold;
+    line-height: 18px;
+
+    display: flex;
+
     color: $sfont-color;
 
-    @include size(185px, 35px);
+    justify-content: space-between;
+    align-items: center;
 
     &:hover > .copyright__icon {
       fill: $social-color;

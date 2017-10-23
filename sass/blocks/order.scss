@@ -7,17 +7,18 @@
   }
 
   @media (min-width: $large-width) {
-      padding-top: 105px;
-      padding-bottom: 50px;
-    }
+    padding-top: 105px;
+    padding-bottom: 50px;
+  }
 
   .order__wrapper {
     @include page-padding;
 
     @media (min-width: $medium-width) {
-      @include page-padding-m;
       padding-top: 50px;
       padding-bottom: 30px;
+
+      @include page-padding-m;
 
       &--bg-grey {
         background-color: $backcolor;
@@ -36,51 +37,57 @@
   }
 
   .order__preface {
-    @include indent-reset
     font-size: 13px;
     line-height: 24px;
+
     width: 260px;
     margin: 0 auto;
+
+    @include indent-reset
 
     @media (min-width: $medium-width) {
       font-size: 17px;
       line-height: 30px;
+
       width: 668px;
     }
 
     @media (min-width: $large-width) {
-      padding-left: 175px;
-      padding-right: 175px;
       width: 1050px;
+      padding-right: 175px;
+      padding-left: 175px;
     }
   }
 
   .order__block-form {
-    @include indent-reset;
+    width: 260px;
     margin: 0 auto;
     margin-top: 25px;
+
     border: none;
-    width: 260px;
+
+    @include indent-reset;
 
     &--icon {
       position: relative;
     }
 
     @media (min-width: $medium-width) {
+      position: relative;
+
+      width: 668px;
       margin-top: 0;
       padding-left: 167px;
-      position: relative;
-      width: 668px;
 
       &--indent {
         margin-bottom: 20px;
-        }
+      }
     }
 
     @media (min-width: $large-width) {
-      padding-left: 175px;
-      padding-right: 175px;
       width: 1050px;
+      padding-right: 175px;
+      padding-left: 175px;
 
       &--right-indent {
         padding-right: 0;
@@ -91,9 +98,10 @@
   .order__phone-icon,
   .order__email-icon {
     position: absolute;
-    opacity: 0.2;
     top: 30px;
     right: 5px;
+
+    opacity: 0.2;
 
     @media (min-width: $medium-width) {
       top: 15px;
@@ -106,14 +114,18 @@
   }
 
   .order__legend {
-    position: relative;
     font-size: 17px;
-    line-height: 16px;
     font-weight: bold;
-    text-transform: uppercase;
-    color: $prodgroup-l-color;
-    margin-bottom: 20px;
+    line-height: 16px;
+
+    position: relative;
+
     width: 100%;
+    margin-bottom: 20px;
+
+    text-transform: uppercase;
+
+    color: $prodgroup-l-color;
 
     &--indent {
       margin-bottom: 5px;
@@ -121,12 +133,15 @@
 
     @media (max-width: $mobile-width-only) {
       &::after {
-        content: "";
         position: absolute;
         top: 7px;
         right: 0;
+
         width: 198px;
         height: 1px;
+
+        content: "";
+
         background-color: $prodgroup-l-color;
       }
 
@@ -139,9 +154,10 @@
 
     @media (min-width: $medium-width) {
       position: absolute;
-      width: auto;
       top: 20px;
       left: 0;
+
+      width: auto;
     }
 
     @media (min-width: $large-width) {
@@ -150,30 +166,37 @@
   }
 
   .order__type {
-    display: block;
     position: relative;
 
-    @include text-item-form;
-    padding-left: 65px;
+    display: block;
+
     padding-top: 10px;
     padding-bottom: 15px;
+    padding-left: 65px;
+
+    @include text-item-form;
 
     &::before {
-      content: "";
       position: absolute;
       top: 5px;
       left: 0;
+
       width: 35px;
       height: 35px;
-      border-radius: 50%;
+
+      content: "";
+
       border: 9px solid $l-font-color;
+      border-radius: 50%;
       box-shadow: 0 0 0 2px $sfont-color;
 
       @media (min-width: $medium-width) {
+        top: 0;
+
         width: 50px;
         height: 50px;
+
         border: 15px solid $l-font-color;
-        top: 0;
       }
     }
 
@@ -182,14 +205,15 @@
     }
 
     &:active::before {
+      background-color: $prodgroup-l-color;
       box-shadow: 0 0 0 2px rgba($mfont-color, 0.3);
     }
 
     @media (min-width: $medium-width) {
-      padding-left: 80px;
       margin-bottom: 25px;
       padding-top: 15px;
       padding-bottom: 20px;
+      padding-left: 80px;
     }
   }
 
@@ -197,21 +221,125 @@
     background-color: $prodgroup-l-color;
   }
 
-  .order__name {
+  .order__input-radio:checked:active + .order__type:before {
+    background-color: $l-font-color;
+  }
+
+  .order__input-radio:focus + .order__type:before {
+    box-shadow: 0 0 0 2px $prodgroup-l-color;
+  }
+
+  .order__color-checkbox {
+    position: relative;
+
+    display: block;
+
+    padding-top: 23px;
+    padding-bottom: 20px;
+    padding-left: 65px;
+
     @include text-item-form;
-      padding-right: 25px;
+
+    &::before {
+      position: absolute;
+      top: 10px;
+      left: 0;
+
+      width: 40px;
+      height: 39px;
+
+      content: "";
+
+      border: 2px solid $mfont-color;
+
+      @media (min-width: $medium-width) {
+        top: 5px;
+
+        width: 54px;
+        height: 52px;
+      }
+    }
+
+    &:hover::before {
+      border-color: $prodgroup-l-color;
+    }
+
+    &:active::before {
+      border-color: rgba($mfont-color, 0.3);
+      background: url("../../img/icon-tick.svg") no-repeat center;
+    }
+
+    @media (min-width: $medium-width) {
+      display: inline-block;
+
+      width: 230px;
+      margin-bottom: 15px;
+      padding-top: 20px;
+      padding-bottom: 23px;
+      padding-left: 80px;
+
+      &:nth-of-type(odd) {
+        margin-right: 30px;
+      }
+    }
+
+    @media (min-width: $large-width) {
+      margin-right: 30px;
+    }
+  }
+
+  .order__input-checkbox:checked + .order__color-checkbox:before {
+    background: url("../../img/icon-tick.svg") no-repeat center;
+    background-size: 22px 16px;
+
+    @media (min-width: $medium-width) {
+      background-size: auto;
+    }
+  }
+
+  .order__input-checkbox:checked:active + .order__color-checkbox:before {
+    background: none;
+  }
+
+  .order__input-checkbox:disabled + .order__color-checkbox:before {
+    opacity: 0.5;
+  }
+
+  .order__input-checkbox:disabled + .order__color-checkbox:hover::before {
+    border-color: $mfont-color;
+  }
+
+  .order__input-checkbox:disabled + .order__color-checkbox:active::before {
+    background: none;
+  }
+
+  .order__input-checkbox:disabled:checked + .order__color-checkbox:active::before {
+    background: url("../../img/icon-tick.svg") no-repeat center;
+  }
+
+  .order__input-checkbox:focus + .order__color-checkbox:before {
+    border-color: $prodgroup-l-color;
+  }
+
+  .order__name {
+    padding-right: 25px;
+
+    @include text-item-form;
   }
 
   .order__input-name {
-    @include text-item-form;
     font-weight: normal;
-    border: none;
-    outline: none;
+
     width: 100%;
+    margin-bottom: 15px;
     padding-top: 10px;
     padding-bottom: 15px;
+
+    border: none;
     border-bottom: 2px solid $sfont-color;
-    margin-bottom: 15px;
+    outline: none;
+
+    @include text-item-form;
 
     &:hover {
       border-color: $prodgroup-l-color;
@@ -222,30 +350,30 @@
     }
 
     &::-webkit-input-placeholder {
-      color: $mfont-color;
       opacity: 0.3;
+      color: $mfont-color;
     }
 
     &::-moz-placeholder {
-      color: $mfont-color;
       opacity: 0.3;
+      color: $mfont-color;
     }
 
     &:-ms-input-placeholder {
-      color: $mfont-color;
       opacity: 0.3;
+      color: $mfont-color;
     }
 
     &:-moz-placeholder {
-      color: $mfont-color;
       opacity: 0.3;
+      color: $mfont-color;
     }
 
     @media (min-width: $medium-width) {
       width: 370px;
-      padding-left: 15px;
-      padding-top: 20px;
       margin-bottom: 12px;
+      padding-top: 20px;
+      padding-left: 15px;
 
       &:first-of-type {
         width: 423px;
@@ -262,16 +390,19 @@
   }
 
   .order__input-email {
-    @include text-item-form;
     font-weight: normal;
-    border: none;
-    outline: none;
+
     width: 100%;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-right: 45px;
-    border-bottom: 2px solid $sfont-color;
     margin-bottom: 10px;
+    padding-top: 15px;
+    padding-right: 45px;
+    padding-bottom: 15px;
+
+    border: none;
+    border-bottom: 2px solid $sfont-color;
+    outline: none;
+
+    @include text-item-form;
 
     &:hover {
       border-color: $prodgroup-l-color;
@@ -282,54 +413,61 @@
     }
 
     &:hover + svg {
-      fill: $prodgroup-l-color;
       opacity: 1;
+
+      fill: $prodgroup-l-color;
     }
 
     &:focus + svg {
-      fill: $prodgroup-l-color;
       opacity: 1;
+
+      fill: $prodgroup-l-color;
     }
 
     &::-webkit-input-placeholder {
-      color: $mfont-color;
       opacity: 0.3;
+      color: $mfont-color;
     }
 
     &::-moz-placeholder {
-      color: $mfont-color;
       opacity: 0.3;
+      color: $mfont-color;
     }
 
     &:-ms-input-placeholder {
-      color: $mfont-color;
       opacity: 0.3;
+      color: $mfont-color;
     }
 
     &:-moz-placeholder {
-      color: $mfont-color;
       opacity: 0.3;
+      color: $mfont-color;
     }
 
     @media (min-width: $medium-width) {
-      padding-left: 15px;
       padding-bottom: 12px;
+      padding-left: 15px;
+
       background-color: $backcolor;
     }
   }
 
   .order__input-tel {
-    position: relative;
-    @include text-item-form;
     font-weight: normal;
-    border: none;
-    outline: none;
+
+    position: relative;
+
     width: 100%;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-right: 45px;
-    border-bottom: 1px solid $sfont-color;
     margin-bottom: 10px;
+    padding-top: 15px;
+    padding-right: 45px;
+    padding-bottom: 15px;
+
+    border: none;
+    border-bottom: 1px solid $sfont-color;
+    outline: none;
+
+    @include text-item-form;
 
     &:hover {
       border-color: $prodgroup-l-color;
@@ -340,115 +478,61 @@
     }
 
     &:hover + svg {
-      fill: $prodgroup-l-color;
       opacity: 1;
+
+      fill: $prodgroup-l-color;
     }
 
     &:focus + svg {
-      fill: $prodgroup-l-color;
       opacity: 1;
+
+      fill: $prodgroup-l-color;
     }
 
     &::-webkit-input-placeholder {
-      color: $mfont-color;
       opacity: 0.3;
+      color: $mfont-color;
     }
 
     &::-moz-placeholder {
-      color: $mfont-color;
       opacity: 0.3;
+      color: $mfont-color;
     }
 
     &:-ms-input-placeholder {
-      color: $mfont-color;
       opacity: 0.3;
+      color: $mfont-color;
     }
 
     &:-moz-placeholder {
-      color: $mfont-color;
       opacity: 0.3;
+      color: $mfont-color;
     }
 
     @media (min-width: $medium-width) {
-      padding-left: 15px;
-      padding-bottom: 12px;
-      border-bottom: 2px solid $sfont-color;
       font-size: 19px;
+
       margin-bottom: 0;
+      padding-bottom: 12px;
+      padding-left: 15px;
+
+      border-bottom: 2px solid $sfont-color;
       background-color: $backcolor;
     }
   }
 
-  .order__color-checkbox {
-    display: block;
-    position: relative;
-
-    @include text-item-form;
-    padding-left: 65px;
-    padding-top: 23px;
-    padding-bottom: 20px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 10px;
-      left: 0;
-      width: 40px;
-      height: 39px;
-      border: 2px solid $mfont-color;
-
-      @media (min-width: $medium-width) {
-        width: 54px;
-        height: 52px;
-        top: 5px;
-      }
-    }
-
-    &:hover::before {
-      border-color: $prodgroup-l-color;
-    }
-
-    &:active::before {
-      border-color: rgba($mfont-color, 0.3);
-
-    }
-
-    @media (min-width: $medium-width) {
-      width: 230px;
-      display: inline-block;
-      padding-left: 80px;
-      margin-bottom: 15px;
-      padding-top: 20px;
-      padding-bottom: 23px;
-
-      &:nth-of-type(odd) {
-        margin-right: 30px;
-      }
-    }
-
-    @media (min-width: $large-width) {
-      margin-right: 30px;
-    }
-  }
-
-   .order__input-checkbox:checked + .order__color-checkbox:before {
-      background: url('../../img/icon-tick.svg') no-repeat center;
-      background-size: 22px 16px;
-
-      @media (min-width: $medium-width) {
-        background-size: auto;
-      }
-   }
-
   .order__wishes {
-    @include text-item-form;
     font-weight: normal;
-    outline: none;
+
     width: 100%;
+    padding: 15px;
+
+    border: 2px solid $sfont-color;
+    outline: none;
+
+    @include text-item-form;
 
     @include indent-reset;
-    padding: 15px;
-    border: 2px solid $sfont-color;
 
     &:hover {
       border-color: $prodgroup-l-color;
@@ -459,59 +543,64 @@
     }
 
     &::-webkit-input-placeholder {
-      color: $mfont-color;
       opacity: 0.3;
+      color: $mfont-color;
     }
 
     &::-moz-placeholder {
-      color: $mfont-color;
       opacity: 0.3;
+      color: $mfont-color;
     }
 
     &:-ms-input-placeholder {
-      color: $mfont-color;
       opacity: 0.3;
+      color: $mfont-color;
     }
 
     &:-moz-placeholder {
-      color: $mfont-color;
       opacity: 0.3;
+      color: $mfont-color;
     }
   }
 
   .order__footer-form {
-    margin: 0 auto;
     width: 260px;
+    margin: 0 auto;
 
     @media (min-width: $medium-width) {
       display: flex;
       flex-direction: row-reverse;
-      justify-content: space-between;
-      align-items: center;
+
       width: 668px;
       margin-top: 20px;
+
+      justify-content: space-between;
+      align-items: center;
     }
 
     @media (min-width: $large-width) {
-      padding-left: 175px;
-      padding-right: 175px;
       width: 1050px;
+      padding-right: 175px;
+      padding-left: 175px;
     }
   }
 
   .order__info {
     font-size: 14px;
     line-height: 16px;
-    margin-bottom: 30px;
+
     margin-top: 10px;
+    margin-bottom: 30px;
 
     @media (min-width: $medium-width) {
       font-size: 17px;
       line-height: 30px;
+
       width: 334px;
       margin: 0;
-      vertical-align: middle;
+
       text-align: right;
+      vertical-align: middle;
     }
   }
 

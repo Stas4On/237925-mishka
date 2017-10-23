@@ -13,13 +13,13 @@
     background-color: $l-font-color;
   }
 
-  &--nojs {
-    position: static;
-    transform: translateX(0);
-  }
-
     &--closed .site-list__item:nth-child(n+2) {
       display: none;
+    }
+
+    &--nojs {
+      position: static;
+      transform: translateX(0);
     }
   }
 

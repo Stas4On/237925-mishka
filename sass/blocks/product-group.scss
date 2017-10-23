@@ -1,32 +1,39 @@
 .product-group {
   position: relative;
+
   background-color: $background-image;
 
   @media (min-width: $medium-width) {
     @include page-padding-m;
+
     padding-bottom: 10px;
 
     &:before {
-      content: "";
       position: absolute;
       bottom: 0;
       left: 0;
+
       width: 100%;
       height: 23px;
-      background: url('../../img/bg-zigzag-fill.svg') repeat-x bottom;
+
+      content: "";
+
+      background: url("../../img/bg-zigzag-fill.svg") repeat-x bottom;
       background-size: auto 23px;
     }
   }
 
   @media (min-width: $large-width) {
-      @include page-padding-l;
-      padding-bottom: 20px;
+    @include page-padding-l;
 
-      &:before {
-        height: 37px;
-        background-size: auto 37px;
-      }
+    padding-bottom: 20px;
+
+    &:before {
+      height: 37px;
+
+      background-size: auto 37px;
     }
+  }
 
   .product-group__wrapper {
     text-align: center;
@@ -37,66 +44,87 @@
     }
   }
 
-  .product-group__list{
+  .product-group__list {
     @include list-style-reset;
 
-    @media (min-width: $medium-width){
+    @media (min-width: $medium-width) {
       display: flex;
+
       justify-content: center;
     }
   }
 
   .product-group__item {
-    background-color: $prodgroup-color;
     width: 100%;
     min-width: 320px;
     max-width: 575px;
     margin: 0 auto;
 
+    background-color: $prodgroup-color;
+
     &--lighter {
       background-color: $prodgroup-l-color;
+    }
+
+    @media (min-width: $medium-width) {
+      &:hover {
+        margin-top: -5px;
+
+        .product-group__link {
+          padding-bottom: 35px;
+        }
+      }
     }
   }
 
   .product-group__link {
-    position: relative;
-    display: inline-block;
-    vertical-align: baseline;
-    color: $l-font-color;
     font-size: 19px;
-    line-height: 24px;
     font-weight: bold;
-    padding-top: 25px;
-    padding-bottom: 30px;
-    padding-right: 160px;
-    padding-left: 30px;
-    width: 100%;
-    text-align: left;
+    line-height: 24px;
 
-    @media (min-width: $medium-width){
+    position: relative;
+
+    display: inline-block;
+
+    width: 100%;
+    padding-top: 25px;
+    padding-right: 160px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+
+    text-align: left;
+    vertical-align: baseline;
+
+    color: $l-font-color;
+
+    @media (min-width: $medium-width) {
       font-size: 20px;
       line-height: 30px;
+
       padding-left: 35px;
     }
 
     &::after {
-      content: "";
       position: absolute;
-      transform: translateY(-31px);
-      opacity: 0.5;
       top: 50%;
       right: 25px;
+
       width: 62px;
       height: 62px;
-      background: url('../img/interior.svg') no-repeat center;
+
+      content: "";
+      transform: translateY(-31px);
+
+      opacity: 0.5;
+      background: url("../img/interior.svg") no-repeat center;
     }
 
-    &--toys::after{
-      background: url('../img/toy.svg') no-repeat center;
+    &--toys::after {
+      background: url("../img/toy.svg") no-repeat center;
     }
 
     &:hover {
-      &::after{
+      &::after {
         opacity: 0.7;
       }
     }
@@ -104,7 +132,7 @@
     &:active {
       color: rgba($l-font-color, 0.3);
 
-      &::after{
+      &::after {
         opacity: 0.3;
       }
     }

@@ -11,10 +11,14 @@
     </div>
     <header class="header">
       <nav class="main-nav">
-        <ul class="main-nav__list site-list site-list--closed site-list--nojs">
+        <ul class="main-nav__list site-list site-list--nojs"><!--site-list--nojs - меню открыто и находится в потоке; site-list--closed - меню закрыто, кнопка бургер; site-list--opened - меню открыто, располагается над нижними блоками, кнопка крестик  -->
           <li class="site-list__item site-list__item--logo">
             <a class="site-list__logo" href="index.html"></a>
-            <button class="site-list__toggle" type="button">Открыть меню</button>
+            <button class="site-list__toggle" type="button">
+              <svg class="site-list__open" width="20" height="14"><use xlink:href="#icon-menu-open"></use></svg>
+              <svg class="site-list__close site-list__close--hidden" width="20" height="20"><use xlink:href="#icon-menu-close"></use></svg>
+              Открыть меню
+            </button>
           </li>
           <li class="site-list__item site-list__item--catalog">
             <a class="site-list__link site-list__link--catalog" href="catalog.html">Каталог товаров</a>

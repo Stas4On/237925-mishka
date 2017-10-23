@@ -1,20 +1,23 @@
 .advantages {
   @include page-padding;
+
   padding-top: 35px;
 
   @media (min-width: $medium-width) {
     @include page-padding-m;
+
     padding-top: 50px;
     padding-bottom: 35px;
   }
 
   @media (min-width: $large-width) {
     @include page-padding-l;
+
     padding-top: 60px;
   }
 
 
-  .advantages__wrapper{
+  .advantages__wrapper {
     width: 260px;
     margin: 0 auto;
 
@@ -30,6 +33,7 @@
 
   .advantages__title {
     @include style-h2;
+
     margin-bottom: 25px;
 
     @media (min-width: $medium-width) {
@@ -42,64 +46,72 @@
 
     @media (min-width: $medium-width), (min-width: $large-width) {
       display: flex;
+
       flex-wrap: wrap;
     }
   }
 
   .advantages__item {
-    position: relative;
-    box-sizing: content-box;
-    width: 260px;
     font-size: 17px;
     font-weight: bold;
     line-height: 20px;
-    color: $sfont-color;
+
+    position: relative;
+
+    box-sizing: content-box;
+    width: 260px;
     padding-top: 60px;
     padding-bottom: 24px;
 
+    color: $sfont-color;
+
     &:before {
-      content: "";
       position: absolute;
       top: 0;
       left: -10px;
+
       width: 60px;
       height: 45px;
-      background: url('../img/feature-flower.svg') no-repeat 15px;
+
+      content: "";
+
+      background: url("../img/feature-flower.svg") no-repeat 15px;
     }
 
     &--money {
       &:before {
-        background: url('../img/feature-money.svg') no-repeat 10px 5px;
+        background: url("../img/feature-money.svg") no-repeat 10px 5px;
       }
     }
 
     &--heart {
       &:before {
-        background: url('../img/feature-heart.svg') no-repeat 15px;
+        background: url("../img/feature-heart.svg") no-repeat 15px;
       }
     }
 
     &--ball {
       &:before {
-        background: url('../img/feature-ball.svg') no-repeat center;
+        background: url("../img/feature-ball.svg") no-repeat center;
       }
     }
 
     &--rocket {
       &:before {
-        background: url('../img/feature-rocket.svg') no-repeat center;
+        background: url("../img/feature-rocket.svg") no-repeat center;
       }
     }
 
     &--gift {
       &:before {
-        background: url('../img/feature-gift.svg') no-repeat center;
+        background: url("../img/feature-gift.svg") no-repeat center;
       }
     }
 
     @media (min-width: $medium-width) {
       font-size: 20px;
       line-height: 22px;
+
       width: 300px;
       padding-right: 34px;
       padding-bottom: 50px;

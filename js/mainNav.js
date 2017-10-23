@@ -3,6 +3,7 @@ var navToggle = document.querySelector('.site-list__toggle');
 var toggleIconOpen = document.querySelector('.site-list__open');
 var toggleIconClose = document.querySelector('.site-list__close');
 
+siteList.classList.add('site-list--closed');
 siteList.classList.remove('site-list--nojs');
 
 navToggle.addEventListener('click', function() {
