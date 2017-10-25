@@ -25,5 +25,10 @@
 
   &:active {
     color: rgba($l-font-color, 0.3);
+    background-color: $mfont-color;
+  }
+
+  &:focus {
+    border-color: rgba($mfont-color, 0.7);
   }
 }

@@ -3,23 +3,23 @@
   margin: 0 auto;
 
   @media (max-width: $mobile-width-only) {
-  &--opened {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 3;
-    min-width: 100%;
-    background-color: $l-font-color;
-  }
-
-  &--nojs {
-    position: static;
-    transform: translateX(0);
-  }
+    &--opened {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+      min-width: 100%;
+      background-color: $l-font-color;
+    }
 
     &--closed .site-list__item:nth-child(n+2) {
       display: none;
+    }
+
+    &--nojs {
+      position: static;
+      transform: translateX(0);
     }
   }
 
@@ -232,12 +232,13 @@
 
       @media (max-width: $medium-width-only) {
         &--catalog,
-        &--form,{
-        @include under-header;
-        font-size: 15px;
+        &--form {
+          @include under-header;
+          font-size: 15px;
         }
       }
     }
+
     @media (min-width: $large-width) {
       &--form {
         padding-left: 35px;
@@ -258,7 +259,7 @@
     box-sizing: content-box;
     padding-top: 22px;
     padding-bottom: 21px;
-    background: url('../img/logo-mobile.svg') no-repeat center;
+    background: url("../img/logo-mobile.svg") no-repeat center;
 
     @include size(86px, 36px);
 
@@ -271,12 +272,14 @@
     }
 
     @media (min-width: $medium-width) {
-      background-image: url('../img/logo-tablet.svg');
+      background-image: url("../img/logo-tablet.svg");
+
       @include size(112px, 46px);
     }
 
     @media (min-width: $large-width) {
-      background-image: url('../img/logo-desktop.svg');
+      background-image: url("../img/logo-desktop.svg");
+
       @include size(148px, 72px);
       padding: 0;
     }
@@ -289,7 +292,6 @@
     transform: translateY(-11px);
 
     @include size(22px, 22px);
-
     @include btn-reset;
     font-size: 0;
 

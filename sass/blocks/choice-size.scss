@@ -1,25 +1,32 @@
 .choice-size {
   .choice-size__wrapper {
     display: flex;
-    flex-wrap: wrap;
+
     margin-bottom: 25px;
+
+    flex-wrap: wrap;
 
     @media (min-width: $medium-width) {
       width: 350px;
     }
   }
+
   .choice-size__label {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 15px;
+
     width: 82px;
     height: 52px;
-    text-align: center;
-    font-size: 16px;
-    line-height: 15px;
-    font-weight: bold;
-    border: 2px solid $separator-color;
     margin-right: 7px;
     margin-bottom: 7px;
-    flex-grow: 1;
     padding: 17px 0;
+
+    text-align: center;
+
+    border: 2px solid $separator-color;
+
+    flex-grow: 1;
 
     &:nth-of-type(3n) {
       margin-right: 0;
@@ -39,19 +46,21 @@
   }
 
   .choice-size__button {
+    line-height: 16px;
+
+    margin: 0 auto;
+
+    color: $l-font-color;
     border: none;
     background: $prodgroup-l-color;
-    color: $l-font-color;
-    line-height: 16px;
-    margin: 0 auto;
 
     &:hover {
       background: $prodgroup-color;
     }
 
     &:active {
-      background: $prodgroup-color;
       opacity: 0.5;
+      background: $prodgroup-color;
     }
 
     @media (min-width: $medium-width) {

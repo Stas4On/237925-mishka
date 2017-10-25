@@ -1,13 +1,16 @@
 .page-footer {
-  margin: 0 auto;
-  min-width: 320px;
   @include page-padding;
-  background-color: $backcolor;
+
+  min-width: 320px;
+  margin: 0 auto;
   padding-top: 20px;
   padding-bottom: 20px;
 
+  background-color: $backcolor;
+
   @media (min-width: $medium-width) {
     @include page-padding-m;
+
     padding-top: 50px;
     padding-bottom: 50px;
   }
@@ -18,11 +21,13 @@
 
   .page-footer__wrapper {
     margin: 0 auto;
+
     text-align: center;
 
     @media (min-width: $medium-width) {
       display: flex;
-      justify-content: space-between
+
+      justify-content: space-between;
     }
   }
 
@@ -31,32 +36,32 @@
 
     @media (min-width: $medium-width) {
       display: inline-block;
+
       width: 185px;
     }
   }
 
   .page-footer__logo {
-    display: block;
-    box-sizing: content-box;
-    text-align: left;
-
     @include size(86px, 36px);
+
+    display: block;
+
+    box-sizing: content-box;
+
+    text-align: left;
 
     &:hover > .page-footer__logo-icon {
       fill: $social-color;
     }
 
     &:active > .page-footer__logo-icon {
-      fill: $social-color;
       opacity: 0.3;
-    }
 
-    @media (min-width: $medium-width) {
-
+      fill: $social-color;
     }
   }
 
-  .page-footer__logo-icon{
+  .page-footer__logo-icon {
     @media (min-width: $medium-width) {
       width: 100px;
     }

@@ -18,6 +18,7 @@
     font-size: 43px;
     line-height: 50px;
   }
+
   @media (min-width: $large-width) {
     font-size: 53px;
     line-height: 57px;
@@ -87,6 +88,6 @@
 }
 
 @mixin page-padding-l {
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
