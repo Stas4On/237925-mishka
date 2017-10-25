@@ -174,16 +174,10 @@
 
     display: block;
 
-    width: 320px;
+    width: 100%;
     margin: 0 auto;
 
     text-align: center;
-
-    @media (min-width: $medium-width) {
-      overflow: hidden;
-
-      width: 768px;
-    }
 
     @media (min-width: $large-width) {
       width: 50%;
