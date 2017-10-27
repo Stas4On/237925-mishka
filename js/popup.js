@@ -6,28 +6,28 @@ var popupSizeIndex = document.querySelector(".modal--index");
 var modalCover = document.querySelector(".modal__cover");
 var topWeeksBtn = document.querySelector(".top-weeks__button");
 
-if(cartOne) {
+if (cartOne) {
   cartOne.addEventListener("click", function (evt) {
     evt.preventDefault();
     popupSize.classList.add("modal--show");
   });
 }
 
-if(cartTwo) {
+if (cartTwo) {
   cartTwo.addEventListener("click", function (evt) {
     evt.preventDefault();
     popupSize.classList.add("modal--show");
   });
 }
 
-if(cartThree) {
+if (cartThree) {
   cartThree.addEventListener("click", function (evt) {
     evt.preventDefault();
     popupSize.classList.add("modal--show");
   });
 }
 
-if(topWeeksBtn) {
+if (topWeeksBtn) {
   topWeeksBtn.addEventListener("click", function (evt) {
     evt.preventDefault();
     popupSizeIndex.classList.add("modal--show");

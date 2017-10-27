@@ -532,6 +532,7 @@
 
     border: 2px solid $sfont-color;
     outline: none;
+    resize: none;
 
     &:hover {
       border-color: $prodgroup-l-color;
